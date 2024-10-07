@@ -8,15 +8,15 @@
 
 default = {
     '1+2_Cycloaddition',
-    '1,2-Birad_to_alkene',
+#    '1,2-Birad_to_alkene',
     '1,2_Insertion_CO',
     '1,2_Insertion_carbene',
     '1,2_shiftS',
     '1,3_Insertion_CO2',
     '1,3_Insertion_ROR',
     '1,3_Insertion_RSR',
-    '1,4_Cyclic_birad_scission',
-    '1,4_Linear_birad_scission',
+#    '1,4_Cyclic_birad_scission',
+#    '1,4_Linear_birad_scission',
     '2+2_cycloaddition',
     'Birad_recombination',
     'CO_Disproportionation',

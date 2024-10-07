@@ -2316,7 +2316,7 @@ entry(
             Arrhenius(A=(5.22e+37, 'cm^3/(mol*s)'), n=-8.46, Ea=(-4416, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
         ],
     ),
-    elementary_high_p = True,
+    elementary_high_p = False,
     shortDesc = u"""[Lin2009c]""",
     longDesc =
 u"""
@@ -6852,60 +6852,60 @@ Table 4
 """,
 )
 
-entry(
-    index=408,
-    label="HNO <=> HNO(T)",
-    kinetics=Arrhenius(A=(1e-5, 's^-1'), n=0, Ea=(10000, 'kcal/mol'), T0=(1, 'K')),
-    shortDesc=u"""est.""",
-    longDesc =
-u"""
-RMG estimates this spin-forbidden reaction with a high rate coefficient
-""",
-)
+# entry(
+#     index=408,
+#     label="HNO <=> HNO(T)",
+#     kinetics=Arrhenius(A=(1e-5, 's^-1'), n=0, Ea=(10000, 'kcal/mol'), T0=(1, 'K')),
+#     shortDesc=u"""est.""",
+#     longDesc =
+# u"""
+# RMG estimates this spin-forbidden reaction with a high rate coefficient
+# """,
+# )
 
-entry(
-    index=409,
-    label="HNO + HNO <=> HNO + HNO(T)",
-    kinetics=Arrhenius(A=(1e-5, 'cm^3/(mol*s)'), n=0, Ea=(10000, 'kcal/mol'), T0=(1, 'K')),
-    shortDesc=u"""est.""",
-    longDesc =
-u"""
-RMG estimates this spin-forbidden reaction with a high rate coefficient
-""",
-)
+# entry(
+#     index=409,
+#     label="HNO + HNO <=> HNO + HNO(T)",
+#     kinetics=Arrhenius(A=(1e-5, 'cm^3/(mol*s)'), n=0, Ea=(10000, 'kcal/mol'), T0=(1, 'K')),
+#     shortDesc=u"""est.""",
+#     longDesc =
+# u"""
+# RMG estimates this spin-forbidden reaction with a high rate coefficient
+# """,
+# )
 
-entry(
-    index=410,
-    label="HNO + HNO <=> HNO(T) + HNO(T)",
-    kinetics=Arrhenius(A=(1e-5, 'cm^3/(mol*s)'), n=0, Ea=(10000, 'kcal/mol'), T0=(1, 'K')),
-    shortDesc=u"""est.""",
-    longDesc =
-u"""
-RMG estimates this spin-forbidden reaction with a high rate coefficient
-""",
-)
+# entry(
+#     index=410,
+#     label="HNO + HNO <=> HNO(T) + HNO(T)",
+#     kinetics=Arrhenius(A=(1e-5, 'cm^3/(mol*s)'), n=0, Ea=(10000, 'kcal/mol'), T0=(1, 'K')),
+#     shortDesc=u"""est.""",
+#     longDesc =
+# u"""
+# RMG estimates this spin-forbidden reaction with a high rate coefficient
+# """,
+# )
 
-entry(
-    index=411,
-    label="HNO + HNO(T) <=> HNO(T) + HNO(T)",
-    kinetics=Arrhenius(A=(1e-5, 'cm^3/(mol*s)'), n=0, Ea=(10000, 'kcal/mol'), T0=(1, 'K')),
-    shortDesc=u"""est.""",
-    longDesc =
-u"""
-RMG estimates this spin-forbidden reaction with a high rate coefficient
-""",
-)
+# entry(
+#     index=411,
+#     label="HNO + HNO(T) <=> HNO(T) + HNO(T)",
+#     kinetics=Arrhenius(A=(1e-5, 'cm^3/(mol*s)'), n=0, Ea=(10000, 'kcal/mol'), T0=(1, 'K')),
+#     shortDesc=u"""est.""",
+#     longDesc =
+# u"""
+# RMG estimates this spin-forbidden reaction with a high rate coefficient
+# """,
+# )
 
-entry(
-    index=412,
-    label="HNO + NHOH <=> HNO(T) + NHOH",
-    kinetics=Arrhenius(A=(1e-5, 'cm^3/(mol*s)'), n=0, Ea=(10000, 'kcal/mol'), T0=(1, 'K')),
-    shortDesc=u"""est.""",
-    longDesc =
-u"""
-RMG estimates this spin-forbidden reaction with a high rate coefficient
-""",
-)
+# entry(
+#     index=412,
+#     label="HNO + NHOH <=> HNO(T) + NHOH",
+#     kinetics=Arrhenius(A=(1e-5, 'cm^3/(mol*s)'), n=0, Ea=(10000, 'kcal/mol'), T0=(1, 'K')),
+#     shortDesc=u"""est.""",
+#     longDesc =
+# u"""
+# RMG estimates this spin-forbidden reaction with a high rate coefficient
+# """,
+# )
 
 entry(
     index=413,
@@ -6953,7 +6953,7 @@ entry(
     index=416,
     label="NH + O2 <=> HNOO",
     degeneracy=1,
-    elementary_high_p=True,
+    elementary_high_p=False,
     kinetics=PDepArrhenius(
         pressures=([0.1, 1, 10], 'atm'),
         arrhenius=[
@@ -7082,7 +7082,7 @@ entry(
             Arrhenius(A=(1.31e-03, 'cm^3/(mol*s)'), n=4.11, Ea=(-1938, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
         ],
     ),
-    elementary_high_p = True,
+    elementary_high_p = False,
     shortDesc=u"""[Lin2009c]""",
     longDesc=
 u"""
@@ -7106,7 +7106,7 @@ entry(
             Arrhenius(A=(1.95e+06, 'cm^3/(mol*s)'), n=1.92, Ea=(-1312, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
         ],
     ),
-    elementary_high_p = True,
+    elementary_high_p = False,
     shortDesc=u"""[Lin2009c]""",
     longDesc=
 u"""

@@ -1,0 +1,15 @@
+ONHNHO(S)
+1 O u0 p2 c0 {2,D}
+2 N u0 p0 c+1 {1,D} {3,S} {5,S}
+3 N u0 p1 c0 {2,S} {4,S} {6,S}
+4 O u0 p3 c-1 {3,S}
+5 H u0 p0 c0 {2,S}
+6 H u0 p0 c0 {3,S}
+
+ONNH2O
+1 O u0 p2 c0 {2,D}
+2 N u0 p1 c0 {1,D} {3,S}
+3 N u0 p0 c+1 {2,S} {4,S} {5,S} {6,S}
+4 O u0 p3 c-1 {3,S}
+5 H u0 p0 c0 {3,S}
+6 H u0 p0 c0 {3,S}

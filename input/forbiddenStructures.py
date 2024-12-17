@@ -589,3 +589,1238 @@ u"""
 CO binds in a monodentate configuration
 """,
 )
+
+entry(
+    label = "[NH]N(N=O)[O]",
+    species =
+"""
+multiplicity 3
+1 O u1 p2 c0 {3,S}
+2 O u0 p2 c0 {5,D}
+3 N u0 p1 c0 {1,S} {4,S} {5,S}
+4 N u1 p1 c0 {3,S} {6,S}
+5 N u0 p1 c0 {2,D} {3,S}
+6 H u0 p0 c0 {4,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]([NH2+][NH])[O]",
+    species =
+"""
+multiplicity 3
+1 O u1 p2 c0 {4,S}
+2 N u0 p0 c+1 {3,S} {4,S} {5,S} {6,S}
+3 N u1 p1 c0 {2,S} {7,S}
+4 N u0 p2 c-1 {1,S} {2,S}
+5 H u0 p0 c0 {2,S}
+6 H u0 p0 c0 {2,S}
+7 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]=[N+]1ON1[O]",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u1 p2 c0 {3,S}
+3 N u0 p1 c0 {1,S} {2,S} {4,S}
+4 N u0 p0 c+1 {1,S} {3,S} {5,D}
+5 N u0 p2 c-1 {4,D}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N]N(N=O)O",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {3,S} {6,S}
+2 O u0 p2 c0 {4,D}
+3 N u0 p1 c0 {1,S} {4,S} {5,S}
+4 N u0 p1 c0 {2,D} {3,S}
+5 N u2 p1 c0 {3,S}
+6 H u0 p0 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "OO[N]N=[N]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {2,S} {3,S}
+2 O u0 p2 c0 {1,S} {6,S}
+3 N u1 p1 c0 {1,S} {4,S}
+4 N u0 p1 c0 {3,S} {5,D}
+5 N u1 p1 c0 {4,D}
+6 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-][NH2+]O[N]O",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u0 p2 c0 {4,S} {8,S}
+3 N u0 p0 c+1 {1,S} {5,S} {6,S} {7,S}
+4 N u1 p1 c0 {1,S} {2,S}
+5 N u1 p2 c-1 {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+8 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]([NH2+]N)[O]",
+    species =
+"""
+multiplicity 2
+1 O u1 p2 c0 {4,S}
+2 N u0 p0 c+1 {3,S} {4,S} {5,S} {6,S}
+3 N u0 p1 c0 {2,S} {7,S} {8,S}
+4 N u0 p2 c-1 {1,S} {2,S}
+5 H u0 p0 c0 {2,S}
+6 H u0 p0 c0 {2,S}
+7 H u0 p0 c0 {3,S}
+8 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-][NH+](N=[N])[O]",
+    species =
+"""
+multiplicity 3
+1 O u1 p2 c0 {3,S}
+2 O u0 p3 c-1 {3,S}
+3 N u0 p0 c+1 {1,S} {2,S} {4,S} {6,S}
+4 N u0 p1 c0 {3,S} {5,D}
+5 N u1 p1 c0 {4,D}
+6 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "O[NH2+][N-][O]",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {3,S} {7,S}
+2 O u1 p2 c0 {4,S}
+3 N u0 p0 c+1 {1,S} {4,S} {5,S} {6,S}
+4 N u0 p2 c-1 {2,S} {3,S}
+5 H u0 p0 c0 {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]=[N+]1NO1",
+    species =
+"""
+1 O u0 p2 c0 {2,S} {3,S}
+2 N u0 p1 c0 {1,S} {3,S} {5,S}
+3 N u0 p0 c+1 {1,S} {2,S} {4,D}
+4 N u0 p2 c-1 {3,D}
+5 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "O=N[N+](=O)[N-]",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {3,D}
+2 O u0 p2 c0 {4,D}
+3 N u0 p0 c+1 {1,D} {4,S} {5,S}
+4 N u0 p1 c0 {2,D} {3,S}
+5 N u1 p2 c-1 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-][NH2+]O[O]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {2,S} {3,S}
+2 O u1 p2 c0 {1,S}
+3 N u0 p0 c+1 {1,S} {4,S} {5,S} {6,S}
+4 N u1 p2 c-1 {3,S}
+5 H u0 p0 c0 {3,S}
+6 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]([NH3+])O[N][O]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {4,S} {5,S}
+2 O u1 p2 c0 {5,S}
+3 N u0 p0 c+1 {4,S} {6,S} {7,S} {8,S}
+4 N u0 p2 c-1 {1,S} {3,S}
+5 N u1 p1 c0 {1,S} {2,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+8 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-][NH2+][N][NH]",
+    species =
+"""
+multiplicity 3
+1 O u0 p3 c-1 {2,S}
+2 N u0 p0 c+1 {1,S} {3,S} {5,S} {6,S}
+3 N u1 p1 c0 {2,S} {4,S}
+4 N u1 p1 c0 {3,S} {7,S}
+5 H u0 p0 c0 {2,S}
+6 H u0 p0 c0 {2,S}
+7 H u0 p0 c0 {4,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]=[N+]1ON1O",
+    species =
+"""
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u0 p2 c0 {3,S} {6,S}
+3 N u0 p1 c0 {1,S} {2,S} {4,S}
+4 N u0 p0 c+1 {1,S} {3,S} {5,D}
+5 N u0 p2 c-1 {4,D}
+6 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]1O[N][N+]1=O",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {4,S} {5,S}
+2 O u0 p2 c0 {3,D}
+3 N u0 p0 c+1 {2,D} {4,S} {5,S}
+4 N u1 p1 c0 {1,S} {3,S}
+5 N u0 p2 c-1 {1,S} {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-][NH2+]ON[O]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u1 p2 c0 {4,S}
+3 N u0 p0 c+1 {1,S} {5,S} {6,S} {7,S}
+4 N u0 p1 c0 {1,S} {2,S} {8,S}
+5 N u1 p2 c-1 {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+8 H u0 p0 c0 {4,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[NH]NOO[NH]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {2,S} {3,S}
+2 O u0 p2 c0 {1,S} {5,S}
+3 N u0 p1 c0 {1,S} {4,S} {6,S}
+4 N u1 p1 c0 {3,S} {7,S}
+5 N u1 p1 c0 {2,S} {8,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {4,S}
+8 H u0 p0 c0 {5,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-]O[N+](=[N])N",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {2,S} {3,S}
+2 O u0 p3 c-1 {1,S}
+3 N u0 p0 c+1 {1,S} {4,S} {5,D}
+4 N u0 p1 c0 {3,S} {6,S} {7,S}
+5 N u1 p1 c0 {3,D}
+6 H u0 p0 c0 {4,S}
+7 H u0 p0 c0 {4,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O]N([NH2+][N-])O",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {4,S} {8,S}
+2 O u1 p2 c0 {4,S}
+3 N u0 p0 c+1 {4,S} {5,S} {6,S} {7,S}
+4 N u0 p1 c0 {1,S} {2,S} {3,S}
+5 N u1 p2 c-1 {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+8 H u0 p0 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-][N+](=O)[NH2+][O-]",
+    species =
+"""
+multiplicity 2
+1 O u0 p3 c-1 {3,S}
+2 O u0 p2 c0 {4,D}
+3 N u0 p0 c+1 {1,S} {4,S} {6,S} {7,S}
+4 N u0 p0 c+1 {2,D} {3,S} {5,S}
+5 N u1 p2 c-1 {4,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-][NH2+]OO",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {2,S} {3,S}
+2 O u0 p2 c0 {1,S} {7,S}
+3 N u0 p0 c+1 {1,S} {4,S} {5,S} {6,S}
+4 N u1 p2 c-1 {3,S}
+5 H u0 p0 c0 {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-][NH2+]O[N][NH]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u0 p3 c-1 {3,S}
+3 N u0 p0 c+1 {1,S} {2,S} {6,S} {7,S}
+4 N u1 p1 c0 {1,S} {5,S}
+5 N u1 p1 c0 {4,S} {8,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+8 H u0 p0 c0 {5,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-][NH+]([N][NH])O",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {3,S} {7,S}
+2 O u0 p3 c-1 {3,S}
+3 N u0 p0 c+1 {1,S} {2,S} {4,S} {6,S}
+4 N u1 p1 c0 {3,S} {5,S}
+5 N u1 p1 c0 {4,S} {8,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {1,S}
+8 H u0 p0 c0 {5,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-][NH2+][N][O]",
+    species =
+"""
+multiplicity 3
+1 O u0 p3 c-1 {3,S}
+2 O u1 p2 c0 {4,S}
+3 N u0 p0 c+1 {1,S} {4,S} {5,S} {6,S}
+4 N u1 p1 c0 {2,S} {3,S}
+5 H u0 p0 c0 {3,S}
+6 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]1N([N+]1=O)[O]",
+    species =
+"""
+multiplicity 2
+1 O u1 p2 c0 {3,S}
+2 O u0 p2 c0 {4,D}
+3 N u0 p1 c0 {1,S} {4,S} {5,S}
+4 N u0 p0 c+1 {2,D} {3,S} {5,S}
+5 N u0 p2 c-1 {3,S} {4,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-][NH2+]ON=O",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u0 p2 c0 {4,D}
+3 N u0 p0 c+1 {1,S} {5,S} {6,S} {7,S}
+4 N u0 p1 c0 {1,S} {2,D}
+5 N u1 p2 c-1 {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]=[NH+]O[N]O",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u0 p2 c0 {4,S} {7,S}
+3 N u0 p0 c+1 {1,S} {5,D} {6,S}
+4 N u1 p1 c0 {1,S} {2,S}
+5 N u0 p2 c-1 {3,D}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-][NH2+]N1[N]O1",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {4,S} {5,S}
+2 O u0 p3 c-1 {3,S}
+3 N u0 p0 c+1 {2,S} {4,S} {6,S} {7,S}
+4 N u0 p1 c0 {1,S} {3,S} {5,S}
+5 N u1 p1 c0 {1,S} {4,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "O[N]ON=[N]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u0 p2 c0 {3,S} {6,S}
+3 N u1 p1 c0 {1,S} {2,S}
+4 N u0 p1 c0 {1,S} {5,D}
+5 N u1 p1 c0 {4,D}
+6 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N]OO",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {2,S} {3,S}
+2 O u0 p2 c0 {1,S} {4,S}
+3 N u2 p1 c0 {1,S}
+4 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O]N([NH2+][NH-])O",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {4,S} {9,S}
+2 O u1 p2 c0 {4,S}
+3 N u0 p0 c+1 {4,S} {5,S} {6,S} {7,S}
+4 N u0 p1 c0 {1,S} {2,S} {3,S}
+5 N u0 p2 c-1 {3,S} {8,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+8 H u0 p0 c0 {5,S}
+9 H u0 p0 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]=[NH+]O[O]",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {2,S} {3,S}
+2 O u1 p2 c0 {1,S}
+3 N u0 p0 c+1 {1,S} {4,D} {5,S}
+4 N u0 p2 c-1 {3,D}
+5 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-][NH+]([N][O])N",
+    species =
+"""
+multiplicity 3
+1 O u0 p3 c-1 {3,S}
+2 O u1 p2 c0 {5,S}
+3 N u0 p0 c+1 {1,S} {4,S} {5,S} {6,S}
+4 N u0 p1 c0 {3,S} {7,S} {8,S}
+5 N u1 p1 c0 {2,S} {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {4,S}
+8 H u0 p0 c0 {4,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-]N([NH2+]N)[O]",
+    species =
+"""
+multiplicity 2
+1 O u1 p2 c0 {4,S}
+2 O u0 p3 c-1 {4,S}
+3 N u0 p0 c+1 {4,S} {5,S} {6,S} {7,S}
+4 N u0 p1 c0 {1,S} {2,S} {3,S}
+5 N u0 p1 c0 {3,S} {8,S} {9,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+8 H u0 p0 c0 {5,S}
+9 H u0 p0 c0 {5,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O]NON=[N]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u1 p2 c0 {3,S}
+3 N u0 p1 c0 {1,S} {2,S} {6,S}
+4 N u0 p1 c0 {1,S} {5,D}
+5 N u1 p1 c0 {4,D}
+6 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "NO[N][O]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u1 p2 c0 {4,S}
+3 N u0 p1 c0 {1,S} {5,S} {6,S}
+4 N u1 p1 c0 {1,S} {2,S}
+5 H u0 p0 c0 {3,S}
+6 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "OON=[N]",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {2,S} {3,S}
+2 O u0 p2 c0 {1,S} {5,S}
+3 N u0 p1 c0 {1,S} {4,D}
+4 N u1 p1 c0 {3,D}
+5 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]1ONO[NH2+]1",
+    species =
+"""
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u0 p2 c0 {4,S} {5,S}
+3 N u0 p0 c+1 {1,S} {5,S} {6,S} {7,S}
+4 N u0 p1 c0 {1,S} {2,S} {8,S}
+5 N u0 p2 c-1 {2,S} {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+8 H u0 p0 c0 {4,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "ON=[N]",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {2,S} {4,S}
+2 N u0 p1 c0 {1,S} {3,D}
+3 N u1 p1 c0 {2,D}
+4 H u0 p0 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]O[NH+]=O",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u0 p2 c0 {3,D}
+3 N u0 p0 c+1 {1,S} {2,D} {5,S}
+4 N u1 p2 c-1 {1,S}
+5 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]([NH3+])[O]",
+    species =
+"""
+multiplicity 2
+1 O u1 p2 c0 {3,S}
+2 N u0 p0 c+1 {3,S} {4,S} {5,S} {6,S}
+3 N u0 p2 c-1 {1,S} {2,S}
+4 H u0 p0 c0 {2,S}
+5 H u0 p0 c0 {2,S}
+6 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-][NH2+]O[NH]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {2,S} {3,S}
+2 N u0 p0 c+1 {1,S} {4,S} {5,S} {6,S}
+3 N u1 p1 c0 {1,S} {7,S}
+4 N u1 p2 c-1 {2,S}
+5 H u0 p0 c0 {2,S}
+6 H u0 p0 c0 {2,S}
+7 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]=[NH+]ON=O",
+    species =
+"""
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u0 p2 c0 {4,D}
+3 N u0 p0 c+1 {1,S} {5,D} {6,S}
+4 N u0 p1 c0 {1,S} {2,D}
+5 N u0 p2 c-1 {3,D}
+6 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N]=NN=O",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {2,D}
+2 N u0 p1 c0 {1,D} {3,S}
+3 N u0 p1 c0 {2,S} {4,D}
+4 N u1 p1 c0 {3,D}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-][NH+](N=O)[NH]",
+    species =
+"""
+multiplicity 2
+1 O u0 p3 c-1 {3,S}
+2 O u0 p2 c0 {5,D}
+3 N u0 p0 c+1 {1,S} {4,S} {5,S} {6,S}
+4 N u1 p1 c0 {3,S} {7,S}
+5 N u0 p1 c0 {2,D} {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {4,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[NH]ON=[N]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {2,S} {3,S}
+2 N u1 p1 c0 {1,S} {5,S}
+3 N u0 p1 c0 {1,S} {4,D}
+4 N u1 p1 c0 {3,D}
+5 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O]N([NH+]=[N-])O",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {3,S} {7,S}
+2 O u1 p2 c0 {3,S}
+3 N u0 p1 c0 {1,S} {2,S} {4,S}
+4 N u0 p0 c+1 {3,S} {5,D} {6,S}
+5 N u0 p2 c-1 {4,D}
+6 H u0 p0 c0 {4,S}
+7 H u0 p0 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O]N([NH+]=[N-])[O]",
+    species =
+"""
+multiplicity 3
+1 O u1 p2 c0 {3,S}
+2 O u1 p2 c0 {3,S}
+3 N u0 p1 c0 {1,S} {2,S} {4,S}
+4 N u0 p0 c+1 {3,S} {5,D} {6,S}
+5 N u0 p2 c-1 {4,D}
+6 H u0 p0 c0 {4,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O]ON=[N]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {2,S} {3,S}
+2 O u1 p2 c0 {1,S}
+3 N u0 p1 c0 {1,S} {4,D}
+4 N u1 p1 c0 {3,D}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-][N+](=O)N=[N]",
+    species =
+"""
+multiplicity 2
+1 O u0 p3 c-1 {3,S}
+2 O u0 p2 c0 {3,D}
+3 N u0 p0 c+1 {1,S} {2,D} {4,S}
+4 N u0 p1 c0 {3,S} {5,D}
+5 N u1 p1 c0 {4,D}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-][NH+]1OO1",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {2,S} {3,S}
+2 O u0 p2 c0 {1,S} {3,S}
+3 N u0 p0 c+1 {1,S} {2,S} {4,S} {5,S}
+4 N u1 p2 c-1 {3,S}
+5 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O]N([NH2+][NH-])[O]",
+    species =
+"""
+multiplicity 3
+1 O u1 p2 c0 {4,S}
+2 O u1 p2 c0 {4,S}
+3 N u0 p0 c+1 {4,S} {5,S} {6,S} {7,S}
+4 N u0 p1 c0 {1,S} {2,S} {3,S}
+5 N u0 p2 c-1 {3,S} {8,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+8 H u0 p0 c0 {5,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N]ON=O",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u0 p2 c0 {3,D}
+3 N u0 p1 c0 {1,S} {2,D}
+4 N u2 p1 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[NH-][NH2+]O[O]",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {2,S} {3,S}
+2 O u1 p2 c0 {1,S}
+3 N u0 p0 c+1 {1,S} {4,S} {5,S} {6,S}
+4 N u0 p2 c-1 {3,S} {7,S}
+5 H u0 p0 c0 {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {4,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[O-][NH2+]N=[N]",
+    species =
+"""
+multiplicity 2
+1 O u0 p3 c-1 {2,S}
+2 N u0 p0 c+1 {1,S} {3,S} {5,S} {6,S}
+3 N u0 p1 c0 {2,S} {4,D}
+4 N u1 p1 c0 {3,D}
+5 H u0 p0 c0 {2,S}
+6 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]1OON[NH2+]1",
+    species =
+"""
+1 O u0 p2 c0 {2,S} {4,S}
+2 O u0 p2 c0 {1,S} {5,S}
+3 N u0 p0 c+1 {4,S} {5,S} {6,S} {7,S}
+4 N u0 p1 c0 {1,S} {3,S} {8,S}
+5 N u0 p2 c-1 {2,S} {3,S}
+6 H u0 p0 c0 {3,S}
+7 H u0 p0 c0 {3,S}
+8 H u0 p0 c0 {4,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-]O[NH3+]",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {2,S} {3,S}
+2 N u0 p0 c+1 {1,S} {4,S} {5,S} {6,S}
+3 N u1 p2 c-1 {1,S}
+4 H u0 p0 c0 {2,S}
+5 H u0 p0 c0 {2,S}
+6 H u0 p0 c0 {2,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "O[N]N=[N]",
+    species =
+"""
+multiplicity 3
+1 O u0 p2 c0 {2,S} {5,S}
+2 N u1 p1 c0 {1,S} {3,S}
+3 N u0 p1 c0 {2,S} {4,D}
+4 N u1 p1 c0 {3,D}
+5 H u0 p0 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N]=NON=O",
+    species =
+"""
+multiplicity 2
+1 O u0 p2 c0 {3,S} {4,S}
+2 O u0 p2 c0 {3,D}
+3 N u0 p1 c0 {1,S} {2,D}
+4 N u0 p1 c0 {1,S} {5,D}
+5 N u1 p1 c0 {4,D}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+
+entry(
+    label = "[N-][NH2+]N[O]",
+    species =
+"""
+multiplicity 3
+1 O u1 p2 c0 {3,S}
+2 N u0 p0 c+1 {3,S} {4,S} {5,S} {6,S}
+3 N u0 p1 c0 {1,S} {2,S} {7,S}
+4 N u1 p2 c-1 {2,S}
+5 H u0 p0 c0 {2,S}
+6 H u0 p0 c0 {2,S}
+7 H u0 p0 c0 {3,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)

@@ -2308,12 +2308,12 @@ entry(
     kinetics = PDepArrhenius(
         pressures = ([1, 10, 100, 760, 7600, 76000], 'torr'),
         arrhenius = [
-            Arrhenius(A=(2.17e+32, 'cm^3/(mol*s)'), n=-8.34, Ea=(-3237, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(1.86e+33, 'cm^3/(mol*s)'), n=-8.33, Ea=(-3239, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(2.04e+34, 'cm^3/(mol*s)'), n=-8.34, Ea=(-3309, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(1.92e+35, 'cm^3/(mol*s)'), n=-8.36, Ea=(-3474, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(2.85e+36, 'cm^3/(mol*s)'), n=-8.40, Ea=(-3821, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
-            Arrhenius(A=(5.22e+37, 'cm^3/(mol*s)'), n=-8.46, Ea=(-4416, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(2.17e+32, 'cm^3/(mol*s)'), n=-8.34, Ea=(3237, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(1.86e+33, 'cm^3/(mol*s)'), n=-8.33, Ea=(3239, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(2.04e+34, 'cm^3/(mol*s)'), n=-8.34, Ea=(3309, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(1.92e+35, 'cm^3/(mol*s)'), n=-8.36, Ea=(3474, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(2.85e+36, 'cm^3/(mol*s)'), n=-8.40, Ea=(3821, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
+            Arrhenius(A=(5.22e+37, 'cm^3/(mol*s)'), n=-8.46, Ea=(4416, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
         ],
     ),
     elementary_high_p = False,

@@ -128,15 +128,17 @@ Added by Beat Buesser from 'Gas-Phase Combustion Chemistry' (ISBN: 978-1-4612-70
 
 entry(
     index = 10,
-    label = "NH2 + H <=> NH(S) + H2",
+    label = "NH2 + H <=> NH(T) + H2",
     degeneracy = 2,
     elementary_high_p = True,
     kinetics = Arrhenius(A=(4.8e+08, 'cm^3/(mol*s)'), n=1.5, Ea=(7934, 'cal/mol'), T0=(1, 'K')),
     longDesc = 
 u"""
 Added by Beat Buesser from 'Gas-Phase Combustion Chemistry' (ISBN: 978-1-4612-7088-1), chapter 2, 'Combustion Chemistry of Nitrogen', Anthony M. Dean, Joseph W. Bozzelli,
+Anna Doner changed NH(S) to lower energy NH(T), intended by Dean & Bozzelli
 """,
 )
+
 
 entry(
     index = 11,
@@ -427,15 +429,18 @@ Added by Beat Buesser from 'Gas-Phase Combustion Chemistry' (ISBN: 978-1-4612-70
 
 entry(
     index = 30,
-    label = "NH2 + OH <=> NH(S) + H2O",
+    label = "NH2 + OH <=> NH(T) + H2O",
     degeneracy = 2,
     elementary_high_p = True,
     kinetics = Arrhenius(A=(2.4e+06, 'cm^3/(mol*s)'), n=2, Ea=(50, 'cal/mol'), T0=(1, 'K')),
     longDesc = 
 u"""
 Added by Beat Buesser from 'Gas-Phase Combustion Chemistry' (ISBN: 978-1-4612-7088-1), chapter 2, 'Combustion Chemistry of Nitrogen', Anthony M. Dean, Joseph W. Bozzelli,
+Anna Doner changed NH(S) to lower energy NH(T), intended by Dean & Bozzelli
 """,
 )
+
+
 
 entry(
     index = 31,
@@ -856,7 +861,7 @@ Added by Beat Buesser from 'Gas-Phase Combustion Chemistry' (ISBN: 978-1-4612-70
 
 entry(
     index = 49,
-    label = "CH3 + NH2 <=> CH4 + NH(S)",
+    label = "CH3 + NH2 <=> CH4 + NH(T)",
     degeneracy = 2,
     elementary_high_p = True,
     kinetics = Arrhenius(
@@ -868,8 +873,10 @@ entry(
     longDesc = 
 u"""
 Added by Beat Buesser from 'Gas-Phase Combustion Chemistry' (ISBN: 978-1-4612-7088-1), chapter 2, 'Combustion Chemistry of Nitrogen', Anthony M. Dean, Joseph W. Bozzelli,
+Anna Doner changed NH(S) to NH(T), which is lower in energy and intended by Dean & Bozzelli
 """,
 )
+
 
 entry(
     index = 50,
@@ -4758,12 +4765,13 @@ Added by Beat Buesser from 'Gas-Phase Combustion Chemistry' (ISBN: 978-1-4612-70
 
 entry(
     index = 343,
-    label = "HON(S) + H <=> OH + NH(S)",
+    label = "HON(S) + H <=> OH + NH(T)",
     degeneracy = 1,
     kinetics = Arrhenius(A=(2e+13, 'cm^3/(mol*s)'), n=0, Ea=(0, 'cal/mol'), T0=(1, 'K')),
     longDesc = 
 u"""
 Added by Beat Buesser from 'Gas-Phase Combustion Chemistry' (ISBN: 978-1-4612-7088-1), chapter 2, 'Combustion Chemistry of Nitrogen', Anthony M. Dean, Joseph W. Bozzelli,
+Anna Doner changed NH(S) to NH(T) because it is lower in energy and Dean & Bozzelli do not specify that this is NH(S)
 """,
 )
 

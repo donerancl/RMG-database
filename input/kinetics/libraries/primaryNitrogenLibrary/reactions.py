@@ -5745,7 +5745,7 @@ entry(
 
 entry(
     index=330,
-    label='NH + O2 <=> HNO(T) + O',
+    label='NH + O2 <=> HNO + O',
     kinetics=Arrhenius(A=(4.61e+05, 'cm^3/(mol*s)'), n=2.0, Ea=(6500, 'cal/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3300, 'K')),
     shortDesc=u"""[Miller1992]""",
@@ -5756,6 +5756,7 @@ entry(
     BAC-MP4
     
     Also studied by 10.1021/jp902527a
+    changed to HNO(S) by Anna Doner because this reaction is on the triplet surface
     """,
 )
 

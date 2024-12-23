@@ -1,15 +1,75 @@
-ONHNHO(S)
-1 O u0 p2 c0 {2,D}
-2 N u0 p0 c+1 {1,D} {3,S} {5,S}
-3 N u0 p1 c0 {2,S} {4,S} {6,S}
-4 O u0 p3 c-1 {3,S}
-5 H u0 p0 c0 {2,S}
-6 H u0 p0 c0 {3,S}
+O
+multiplicity 3
+1 O u2 p2 c0
 
-ONNH2O
+HNO
 1 O u0 p2 c0 {2,D}
 2 N u0 p1 c0 {1,D} {3,S}
-3 N u0 p0 c+1 {2,S} {4,S} {5,S} {6,S}
-4 O u0 p3 c-1 {3,S}
-5 H u0 p0 c0 {3,S}
-6 H u0 p0 c0 {3,S}
+3 H u0 p0 c0 {2,S}
+
+HNO2(T)
+multiplicity 3
+1 O u1 p2 c0 {3,S}
+2 O u1 p2 c0 {3,S}
+3 N u0 p1 c0 {1,S} {2,S} {4,S}
+4 H u0 p0 c0 {3,S}
+
+NH3O
+1 O u0 p3 c-1 {2,S}
+2 N u0 p0 c+1 {1,S} {3,S} {4,S} {5,S}
+3 H u0 p0 c0 {2,S}
+4 H u0 p0 c0 {2,S}
+5 H u0 p0 c0 {2,S}
+
+H2
+1 H u0 p0 c0 {2,S}
+2 H u0 p0 c0 {1,S}
+
+NH2OH
+1 O u0 p2 c0 {2,S} {5,S}
+2 N u0 p1 c0 {1,S} {3,S} {4,S}
+3 H u0 p0 c0 {2,S}
+4 H u0 p0 c0 {2,S}
+5 H u0 p0 c0 {1,S}
+
+O[S]
+multiplicity 3
+1 O u2 p2 c0
+
+NH3
+1 N u0 p1 c0 {2,S} {3,S} {4,S}
+2 H u0 p0 c0 {1,S}
+3 H u0 p0 c0 {1,S}
+4 H u0 p0 c0 {1,S}
+
+HON[S]
+1 O u0 p1 c+1 {2,D} {3,S}
+2 N u0 p2 c-1 {1,D}
+3 H u0 p0 c0 {1,S}
+
+HONOT
+multiplicity 3
+1 O u0 p2 c0 {2,S} {4,S}
+2 N u1 p1 c0 {1,S} {3,S}
+3 O u1 p2 c0 {2,S}
+4 H u0 p0 c0 {1,S}
+
+H
+multiplicity 2
+1 H u1 p0 c0
+
+NO2    
+multiplicity 2
+1 O u0 p2 c0 {2,D}
+2 N u0 p1 c0 {1,D} {3,S}
+3 O u1 p2 c0 {2,S}
+
+NO1 
+multiplicity 2
+1 N u1 p1 c0 {2,D}
+2 O u0 p2 c0 {1,D}
+
+OH
+multiplicity 2
+1 O u1 p2 c0 {2,S}
+2 H u0 p0 c0 {1,S}

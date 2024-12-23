@@ -2664,41 +2664,63 @@ calculations done at the MP2(frozen core)/6-311++G(2d,p) level of theory
 """,
 )
 
+# entry(
+#     index = 139,
+#     label = 'NH2 + NO <=> NNH + OH',
+#     kinetics = Arrhenius(A=(4.3e+10, 'cm^3/(mol*s)'), n=0.294, Ea=(-866, 'cal/mol'),
+#         T0=(1, 'K')),
+#     shortDesc =u"""[Glarborg2021]""",
+#     longDesc =
+# u"""
+# Reaction 5a, Table 2
+# Experimental work re-interpreted using direct measurements from [Altinay&Macdonald2015].
+# Original information taken from [Song&Golden2001] Shock tube experiments were  
+# performed behind reflected shockwaves in a stainless steel shock tube. Rates were calculated using their branching 
+# ratio results data and the overall rate coefficient.
+
+# Previously taken from [Lin1999a] 
+
+# Reaction part of the "Thermal de-NOx" mechanism k1a T range: 300-2500 K
+# """,
+# )
+
 entry(
     index = 139,
     label = 'NH2 + NO <=> NNH + OH',
-    kinetics = Arrhenius(A=(4.3e+10, 'cm^3/(mol*s)'), n=0.294, Ea=(-866, 'cal/mol'),
-        T0=(1, 'K')),
-    shortDesc =u"""[Glarborg2021]""",
+    kinetics = Arrhenius(A=(3.13E13, 'cm^3/(mol*s)'), n=-0.48, Ea=(-0.866, 'kcal/mol'), T0=(1, 'K')),
+    shortDesc =u"""[klippenstein 2011]""",
     longDesc =
 u"""
-Reaction 5a, Table 2
-Experimental work re-interpreted using direct measurements from [Altinay&Macdonald2015].
-Original information taken from [Song&Golden2001] Shock tube experiments were  
-performed behind reflected shockwaves in a stainless steel shock tube. Rates were calculated using their branching 
-ratio results data and the overall rate coefficient.
-
-Previously taken from [Lin1999a] 
-
-Reaction part of the "Thermal de-NOx" mechanism k1a T range: 300-2500 K
+klippenstein 2011
 """,
 )
+
+# entry(
+#     index = 140,
+#     label = 'NH2 + NO <=> N2 + H2O',
+#     kinetics = Arrhenius(A=(2.6e+19, 'cm^3/(mol*s)'), n=-2.369, Ea=(870, 'cal/mol'),
+#         T0=(1, 'K')),
+#     shortDesc = u"""[Glarborg2021]""",
+#     longDesc =
+# u"""
+# Reaction 5b, Table 2. Experimental work re-interpreted using direct measurements from [Altinay&Macdonald2015].
+# Original information taken from [Song&Golden2001]. Shock tube experiments were performed behind reflected shockwaves
+# in a stainless steel shock tube. Rates were calculated using their branching ratio results data and the overall rate
+# coefficient.
+
+# Also available from [Lin1999a].
+# Part of the "Thermal de-NOx" mechanism
+# """,
+# )
 
 entry(
     index = 140,
     label = 'NH2 + NO <=> N2 + H2O',
-    kinetics = Arrhenius(A=(2.6e+19, 'cm^3/(mol*s)'), n=-2.369, Ea=(870, 'cal/mol'),
-        T0=(1, 'K')),
-    shortDesc = u"""[Glarborg2021]""",
+    kinetics = Arrhenius(A=(1.3E16, 'cm^3/(mol*s)'), n=-1.25, Ea=(0.870, 'kcal/mol'),T0=(1, 'K')),
+    shortDesc = u"""[klippenstein 2011]""",
     longDesc =
 u"""
-Reaction 5b, Table 2. Experimental work re-interpreted using direct measurements from [Altinay&Macdonald2015].
-Original information taken from [Song&Golden2001]. Shock tube experiments were performed behind reflected shockwaves
-in a stainless steel shock tube. Rates were calculated using their branching ratio results data and the overall rate
-coefficient.
-
-Also available from [Lin1999a].
-Part of the "Thermal de-NOx" mechanism
+Rklippenstein 2011
 """,
 )
 
@@ -2822,8 +2844,7 @@ Also available from [Klippenstein2009a], Table 3, p. 10245, calculated at the CC
 entry(
     index = 148,
     label='NH3 + O <=> NH2 + OH',
-    kinetics=Arrhenius(A=(4.430e+02, 'cm^3/(mol*s)'), n=3.180, Ea=(6739.9, 'cal/mol'),
-                       T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
+    kinetics=Arrhenius(A=(4.430e+02, 'cm^3/(mol*s)'), n=3.180, Ea=(6739.9, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
     shortDesc=u"""[Stagni2020]""",
     longDesc=
 u"""
@@ -5559,21 +5580,43 @@ Fit to experimental measurement
 """,
 )
 
+# entry(
+#     index=316,
+#     label="NO + H <=> HNO",
+#     degeneracy=1,
+#     elementary_high_p=True,
+#     kinetics=Troe(
+#         arrheniusHigh=Arrhenius(A=(1.5e+15, 'cm^3/(mol*s)'), n=-0.410, Ea=(0, 'cal/mol'), T0=(1, 'K')),
+#         arrheniusLow=Arrhenius(A=(2.4e+14, 'cm^6/(mol^2*s)'), n=0.206, Ea=(-1550, 'cal/mol'), T0=(1, 'K')),
+#         alpha=0.82, T3=(1e-30, 'K'), T1=(1e+30, 'K'), T2=(1e+30, 'K'), efficiencies={'N#N': 1.6, 'N': 4}),
+#     shortDesc=u"""[Glarborg2022]""",
+#     longDesc=
+# u"""
+# Recommended rate by Glarborg2022 (also by the NOx2018 library)
+# based on: https://doi.org/10.1002/kin.10137
+# """,
+# )
+
 entry(
     index=316,
     label="NO + H <=> HNO",
     degeneracy=1,
     elementary_high_p=True,
-    kinetics=Troe(
-        arrheniusHigh=Arrhenius(A=(1.5e+15, 'cm^3/(mol*s)'), n=-0.410, Ea=(0, 'cal/mol'), T0=(1, 'K')),
-        arrheniusLow=Arrhenius(A=(2.4e+14, 'cm^6/(mol^2*s)'), n=0.206, Ea=(-1550, 'cal/mol'), T0=(1, 'K')),
-        alpha=0.82, T3=(1e-30, 'K'), T1=(1e+30, 'K'), T2=(1e+30, 'K'), efficiencies={'N#N': 1.6, 'N': 4}),
-    shortDesc=u"""[Glarborg2022]""",
+    kinetics=PDepArrhenius(
+        pressures=([0.1, 1, 10, 100, 1000], 'bar'),
+        arrhenius=[
+            Arrhenius(A=(2.0121e19, 'cm^3/(mol*s)'), n=-3.021, Ea=(47.792, 'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
+            Arrhenius(A=(1.8259e20, 'cm^3/(mol*s)'), n=-3.008, Ea=(47.88, 'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
+            Arrhenius(A=(1.2762e21, 'cm^3/(mol*s)'), n=-2.959, Ea=(48.1,'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
+            Arrhenius(A=(5.6445e21,'cm^3/(mol*s)'), n=-2.855, Ea=(48.459, 'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
+            Arrhenius(A=(9.7111e21, 'cm^3/(mol*s)'), n=-2.642, Ea=(48.94, 'kcal/mol'), T0=(1, 'K'), Tmin=(400, 'K'), Tmax=(2500, 'K')),
+        ]
+    ),
+    shortDesc=u"""[Stagni2020]""",
     longDesc=
 u"""
-Recommended rate by Glarborg2022 (also by the NOx2018 library)
-based on: https://doi.org/10.1002/kin.10137
-""",
+Stagni2020
+"""
 )
 
 entry(
@@ -7463,5 +7506,17 @@ entry(
     longDesc=
     u"""
     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+    """,
+)
+
+
+entry(
+    index=445,
+    label='H + N2H3 <=> NH2 + NH2',
+    kinetics=Arrhenius(A=(1.5E14,'cm^3/(mol*s)'),n=0,Ea = (6277.07,'J/mol')) ,
+        shortDesc=u"""[Hanson2014]""",
+    longDesc=
+    u"""
+    estimated in https://doi.org/10.1016/j.combustflame.2013.07.023
     """,
 )

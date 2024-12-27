@@ -2687,7 +2687,7 @@ calculations done at the MP2(frozen core)/6-311++G(2d,p) level of theory
 entry(
     index = 139,
     label = 'NH2 + NO <=> NNH + OH',
-    kinetics = Arrhenius(A=(3.13E13, 'cm^3/(mol*s)'), n=-0.48, Ea=(-0.866, 'kcal/mol'), T0=(1, 'K')),
+    kinetics = Arrhenius(A=(3.13E13, 'cm^3/(mol*s)'), n=-0.48, Ea=(1180, 'cal/mol'), T0=(1, 'K')),
     shortDesc =u"""[klippenstein 2011]""",
     longDesc =
 u"""
@@ -2716,7 +2716,7 @@ klippenstein 2011
 entry(
     index = 140,
     label = 'NH2 + NO <=> N2 + H2O',
-    kinetics = Arrhenius(A=(1.3E16, 'cm^3/(mol*s)'), n=-1.25, Ea=(0.870, 'kcal/mol'),T0=(1, 'K')),
+    kinetics = Arrhenius(A=(1.3E16, 'cm^3/(mol*s)'), n=-1.25, Ea=(0, 'kcal/mol'),T0=(1, 'K')),
     shortDesc = u"""[klippenstein 2011]""",
     longDesc =
 u"""

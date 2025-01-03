@@ -5608,11 +5608,11 @@ entry(
     kinetics=PDepArrhenius(
         pressures=([0.1, 1, 10, 100, 1000], 'bar'),
         arrhenius=[
-            Arrhenius(A=(2.0121e19, 'cm^3/(mol*s)'), n=-3.021, Ea=(47.792, 'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
-            Arrhenius(A=(1.8259e20, 'cm^3/(mol*s)'), n=-3.008, Ea=(47.88, 'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
-            Arrhenius(A=(1.2762e21, 'cm^3/(mol*s)'), n=-2.959, Ea=(48.1,'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
-            Arrhenius(A=(5.6445e21,'cm^3/(mol*s)'), n=-2.855, Ea=(48.459, 'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
-            Arrhenius(A=(9.7111e21, 'cm^3/(mol*s)'), n=-2.642, Ea=(48.94, 'kcal/mol'), T0=(1, 'K'), Tmin=(400, 'K'), Tmax=(2500, 'K')),
+            Arrhenius(A=(2.0121e19, 's^-1'), n=-3.021, Ea=(47.792, 'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
+            Arrhenius(A=(1.8259e20,'s^-1'), n=-3.008, Ea=(47.88, 'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
+            Arrhenius(A=(1.2762e21,'s^-1'), n=-2.959, Ea=(48.1,'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
+            Arrhenius(A=(5.6445e21,'s^-1'), n=-2.855, Ea=(48.459, 'kcal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(2500, 'K')),
+            Arrhenius(A=(9.7111e21, 's^-1'), n=-2.642, Ea=(48.94, 'kcal/mol'), T0=(1, 'K'), Tmin=(400, 'K'), Tmax=(2500, 'K')),
         ]
     ),
     shortDesc=u"""[Stagni2020]""",

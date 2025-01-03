@@ -2717,12 +2717,15 @@ entry(
     index = 140,
     label = 'NH2 + NO <=> N2 + H2O',
     kinetics = Arrhenius(A=(1.3E16, 'cm^3/(mol*s)'), n=-1.25, Ea=(0, 'kcal/mol'),T0=(1, 'K')),
+    duplicate = True,
     shortDesc = u"""[klippenstein 2011]""",
     longDesc =
 u"""
-Rklippenstein 2011
+Klippenstein 2011
 """,
 )
+
+
 
 entry(
     index = 141,
@@ -5599,7 +5602,7 @@ Fit to experimental measurement
 
 entry(
     index=316,
-    label="NO + H <=> HNO",
+    label="HNO <=> NO + H",
     degeneracy=1,
     elementary_high_p=True,
     kinetics=PDepArrhenius(
@@ -7520,3 +7523,17 @@ entry(
     estimated in https://doi.org/10.1016/j.combustflame.2013.07.023
     """,
 )
+
+entry(
+    index = 446,
+    label = 'NH2 + NO <=> N2 + H2O',
+    kinetics = Arrhenius(A=(-3.13E13, 'cm^3/(mol*s)'), n=-0.48, Ea=(1.180, 'kcal/mol'),T0=(1, 'K')),
+    duplicate = True,
+    shortDesc = u"""[klippenstein 2011]""",
+    longDesc =
+u"""
+Klippenstein 2011
+""",
+)
+
+

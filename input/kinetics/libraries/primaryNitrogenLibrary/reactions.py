@@ -7129,7 +7129,6 @@ entry(
             Arrhenius(A=(1.31e-03, 'cm^3/(mol*s)'), n=4.11, Ea=(-1938, 'cal/mol'), T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
         ],
     ),
-    elementary_high_p = False,
     shortDesc=u"""[Lin2009c]""",
     longDesc=
 u"""
@@ -7250,17 +7249,34 @@ entry(
     """,
 )
 
+# entry(
+#     index=431,
+#     label="N2H3 <=> N2H2 + H",
+#     kinetics=Chebyshev(coeffs=[
+#         [-6.40114, 0.924384, -0.148344, 0.00833621],
+#         [14.5099, 0.809594, 0.0374586, -0.0271928],
+#         [-0.620903, 0.192692, 0.0680562, 0.00277832],
+#         [-0.312241, 0.0135261, 0.0200691, 0.00804536],
+#         [-0.133503, -0.0148586, -0.000903153, 0.00233355],
+#         [-0.0440289, -0.012249, -0.00402369, -0.000514046]],
+#         kunits='s^-1', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+#     shortDesc=u"""[Keslin2024]""",
+#     longDesc=
+#     u"""
+#     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+#     N2H2 here considers both the cis and trans isomers
+#     """,
+# )
+
 entry(
     index=431,
     label="N2H3 <=> N2H2 + H",
-    kinetics=Chebyshev(coeffs=[
-        [-6.40114, 0.924384, -0.148344, 0.00833621],
-        [14.5099, 0.809594, 0.0374586, -0.0271928],
-        [-0.620903, 0.192692, 0.0680562, 0.00277832],
-        [-0.312241, 0.0135261, 0.0200691, 0.00804536],
-        [-0.133503, -0.0148586, -0.000903153, 0.00233355],
-        [-0.0440289, -0.012249, -0.00402369, -0.000514046]],
-        kunits='s^-1', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+    kinetics=PDepArrhenius(pressures=([0.01,0.1,1,10,100],'bar'), arrhenius=[
+Arrhenius(A=(5.95562e+32,'s^-1'), n=-6.89837, Ea=(215.989,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.14655, dn = +|- 0.0170162, dEa = +|- 0.133719 kJ/mol"""),
+Arrhenius(A=(1.13353e+34,'s^-1'), n=-6.96122, Ea=(220.189,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.15635, dn = +|- 0.0180753, dEa = +|- 0.142041 kJ/mol"""),
+Arrhenius(A=(3.0639e+34,'s^-1'), n=-6.77478, Ea=(224.859,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.22744, dn = +|- 0.0254979, dEa = +|- 0.20037 kJ/mol"""),
+Arrhenius(A=(1.34059e+33,'s^-1'), n=-6.08726, Ea=(227.279,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.35892, dn = +|- 0.0381595, dEa = +|- 0.299869 kJ/mol"""),
+Arrhenius(A=(1.0823e+29,'s^-1'), n=-4.64691, Ea=(224.728,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.53527, dn = +|- 0.0533409, dEa = +|- 0.41917 kJ/mol""")]),
     shortDesc=u"""[Keslin2024]""",
     longDesc=
     u"""
@@ -7288,35 +7304,68 @@ entry(
     """,
 )
 
+# entry(
+#     index=433,
+#     label="H2NN(S) + H <=> N2H3",
+#     kinetics=Chebyshev(coeffs=[
+#         [9.88754, 1.96327, -0.0247589, -0.0130164],
+#         [-1.25338, 0.0440103, 0.0294474, 0.0152762],
+#         [-0.485991, -0.00550151, -0.00339791, -0.0014976],
+#         [-0.189775, -0.0019198, -0.00137436, -0.000796358],
+#         [-0.0630576, -0.000352799, -0.000258877, -0.000156026],
+#         [-0.0113548, -6.66626e-05, -4.62106e-05, -2.55265e-05]],
+#         kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+#     shortDesc=u"""[Keslin2024]""",
+#     longDesc=
+#     u"""
+#     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+#     """,
+# )
+
 entry(
     index=433,
     label="H2NN(S) + H <=> N2H3",
-    kinetics=Chebyshev(coeffs=[
-        [9.88754, 1.96327, -0.0247589, -0.0130164],
-        [-1.25338, 0.0440103, 0.0294474, 0.0152762],
-        [-0.485991, -0.00550151, -0.00339791, -0.0014976],
-        [-0.189775, -0.0019198, -0.00137436, -0.000796358],
-        [-0.0630576, -0.000352799, -0.000258877, -0.000156026],
-        [-0.0113548, -6.66626e-05, -4.62106e-05, -2.55265e-05]],
-        kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+    kinetics=PDepArrhenius(pressures=([0.01,0.1,1,10,100],'bar'), arrhenius=[
+Arrhenius(A=(6.12105e+14,'m^3/(mol*s)'), n=-4.2577, Ea=(8.20259,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.09474, dn = +|- 0.0112627, dEa = +|- 0.0885054 kJ/mol"""),
+Arrhenius(A=(6.54072e+15,'m^3/(mol*s)'), n=-4.26527, Ea=(8.35559,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.095, dn = +|- 0.0112919, dEa = +|- 0.0887355 kJ/mol"""),
+Arrhenius(A=(6.16174e+16,'m^3/(mol*s)'), n=-4.2585, Ea=(8.21089,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.09476, dn = +|- 0.0112647, dEa = +|- 0.0885212 kJ/mol"""),
+Arrhenius(A=(7.49876e+17,'m^3/(mol*s)'), n=-4.28123, Ea=(8.61119,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.09547, dn = +|- 0.0113459, dEa = +|- 0.0891599 kJ/mol"""),
+Arrhenius(A=(1.72748e+19,'m^3/(mol*s)'), n=-4.3773, Ea=(10.3992,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.0986, dn = +|- 0.0117007, dEa = +|- 0.0919477 kJ/mol""")]),
     shortDesc=u"""[Keslin2024]""",
     longDesc=
     u"""
     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
     """,
 )
+
+
+# entry(
+#     index=434,
+#     label="NNH + H2 <=> N2H3",
+#     kinetics=Chebyshev(coeffs=[
+#         [-19.4481, 1.81065, -0.064276, -0.0253039],
+#         [21.5942, 0.261294, 0.0723572, 0.0254092],
+#         [0.00869831, -0.0911938, -0.00688808, 0.000544172],
+#         [-0.146515, 0.0181683, -0.00270294, -0.0008349],
+#         [-0.045904, 0.0027117, 0.000845518, -0.00032746],
+#         [0.00161647, -0.0045192, -0.000728323, -0.000335874]],
+#         kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+#     shortDesc=u"""[Keslin2024]""",
+#     longDesc=
+#     u"""
+#     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+#     """,
+# )
 
 entry(
     index=434,
     label="NNH + H2 <=> N2H3",
-    kinetics=Chebyshev(coeffs=[
-        [-19.4481, 1.81065, -0.064276, -0.0253039],
-        [21.5942, 0.261294, 0.0723572, 0.0254092],
-        [0.00869831, -0.0911938, -0.00688808, 0.000544172],
-        [-0.146515, 0.0181683, -0.00270294, -0.0008349],
-        [-0.045904, 0.0027117, 0.000845518, -0.00032746],
-        [0.00161647, -0.0045192, -0.000728323, -0.000335874]],
-        kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+    kinetics=PDepArrhenius(pressures=([0.01,0.1,1,10,100],'bar'), arrhenius=[
+Arrhenius(A=(152.09,'m^3/(mol*s)'), n=-0.944053, Ea=(280.602,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.41397, dn = +|- 0.0431002, dEa = +|- 0.338694 kJ/mol"""),
+Arrhenius(A=(3560.32,'m^3/(mol*s)'), n=-1.04575, Ea=(281.87,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.36566, dn = +|- 0.0387748, dEa = +|- 0.304704 kJ/mol"""),
+Arrhenius(A=(113429,'m^3/(mol*s)'), n=-1.18592, Ea=(283.258,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.30676, dn = +|- 0.0332893, dEa = +|- 0.261598 kJ/mol"""),
+Arrhenius(A=(5.83004e+06,'m^3/(mol*s)'), n=-1.38041, Ea=(285.872,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.24705, dn = +|- 0.02747, dEa = +|- 0.215868 kJ/mol"""),
+Arrhenius(A=(5.73058e+08,'m^3/(mol*s)'), n=-1.64506, Ea=(290.822,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.19473, dn = +|- 0.0221379, dEa = +|- 0.173966 kJ/mol""")]),
     shortDesc=u"""[Keslin2024]""",
     longDesc=
     u"""
@@ -7324,17 +7373,33 @@ entry(
     """,
 )
 
+# entry(
+#     index=435,
+#     label="NH2 + NH <=> N2H3",
+#     kinetics=Chebyshev(coeffs=[
+#         [10.6745, 1.97355, -0.0179894, -0.00960556],
+#         [-1.3789, 0.0319983, 0.0216463, 0.0114501],
+#         [-0.463132, -0.00449203, -0.00288817, -0.00138758],
+#         [-0.18362, -0.00113649, -0.000819454, -0.000480313],
+#         [-0.0668175, -0.00016533, -0.00012078, -7.23456e-05],
+#         [-0.0172416, -4.9409e-05, -3.3737e-05, -1.81469e-05]],
+#         kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+#     shortDesc=u"""[Keslin2024]""",
+#     longDesc=
+#     u"""
+#     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+#     """,
+# )
+
 entry(
     index=435,
     label="NH2 + NH <=> N2H3",
-    kinetics=Chebyshev(coeffs=[
-        [10.6745, 1.97355, -0.0179894, -0.00960556],
-        [-1.3789, 0.0319983, 0.0216463, 0.0114501],
-        [-0.463132, -0.00449203, -0.00288817, -0.00138758],
-        [-0.18362, -0.00113649, -0.000819454, -0.000480313],
-        [-0.0668175, -0.00016533, -0.00012078, -7.23456e-05],
-        [-0.0172416, -4.9409e-05, -3.3737e-05, -1.81469e-05]],
-        kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+    kinetics=PDepArrhenius(pressures=([0.01,0.1,1,10,100],'bar'), arrhenius=[
+Arrhenius(A=(9.494e+14,'m^3/(mol*s)'), n=-4.12386, Ea=(6.04543,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.07621, dn = +|- 0.00913796, dEa = +|- 0.0718089 kJ/mol"""),
+Arrhenius(A=(1.00134e+16,'m^3/(mol*s)'), n=-4.12997, Ea=(6.1627,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.07636, dn = +|- 0.00915566, dEa = +|- 0.0719481 kJ/mol"""),
+Arrhenius(A=(9.5228e+16,'m^3/(mol*s)'), n=-4.12422, Ea=(6.04883,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.07617, dn = +|- 0.00913408, dEa = +|- 0.0717784 kJ/mol"""),
+Arrhenius(A=(1.09609e+18,'m^3/(mol*s)'), n=-4.14052, Ea=(6.33353,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.07627, dn = +|- 0.00914515, dEa = +|- 0.0718654 kJ/mol"""),
+Arrhenius(A=(2.04959e+19,'m^3/(mol*s)'), n=-4.21275, Ea=(7.64652,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.07738, dn = +|- 0.00927389, dEa = +|- 0.0728771 kJ/mol""")]),
     shortDesc=u"""[Keslin2024]""",
     longDesc=
     u"""
@@ -7396,17 +7461,34 @@ entry(
     """,
 )
 
+# entry(
+#     index=439,
+#     label="H2NN(S) + H <=> N2H2 + H",
+#     kinetics=Chebyshev(coeffs=[
+#         [12.9738, -0.0348987, -0.023535, -0.0123819],
+#         [0.0217424, 0.0430664, 0.0288499, 0.0149983],
+#         [0.00967646, -0.00629027, -0.00395138, -0.00180868],
+#         [0.0182197, -0.00208759, -0.00149626, -0.000868728],
+#         [0.0170461, -0.000279099, -0.000208491, -0.000128907],
+#         [0.0140615, 2.83061e-05, 1.99858e-05, 1.13116e-05]],
+#         kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+#     shortDesc=u"""[Keslin2024]""",
+#     longDesc=
+#     u"""
+#     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+#     N2H2 here considers both the cis and trans isomers
+#     """,
+# )
+
 entry(
     index=439,
     label="H2NN(S) + H <=> N2H2 + H",
-    kinetics=Chebyshev(coeffs=[
-        [12.9738, -0.0348987, -0.023535, -0.0123819],
-        [0.0217424, 0.0430664, 0.0288499, 0.0149983],
-        [0.00967646, -0.00629027, -0.00395138, -0.00180868],
-        [0.0182197, -0.00208759, -0.00149626, -0.000868728],
-        [0.0170461, -0.000279099, -0.000208491, -0.000128907],
-        [0.0140615, 2.83061e-05, 1.99858e-05, 1.13116e-05]],
-        kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+    kinetics=PDepArrhenius(pressures=([0.01,0.1,1,10,100],'bar'), arrhenius=[
+Arrhenius(A=(777370,'m^3/(mol*s)'), n=0.317022, Ea=(-2.24848,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.07824, dn = +|- 0.00937331, dEa = +|- 0.0736584 kJ/mol"""),
+Arrhenius(A=(838957,'m^3/(mol*s)'), n=0.308226, Ea=(-2.09075,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.07832, dn = +|- 0.00938225, dEa = +|- 0.0737286 kJ/mol"""),
+Arrhenius(A=(782120,'m^3/(mol*s)'), n=0.316286, Ea=(-2.24088,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.07843, dn = +|- 0.00939459, dEa = +|- 0.0738256 kJ/mol"""),
+Arrhenius(A=(968995,'m^3/(mol*s)'), n=0.29132, Ea=(-1.83551,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.07999, dn = +|- 0.00957422, dEa = +|- 0.0752372 kJ/mol"""),
+Arrhenius(A=(2.45458e+06,'m^3/(mol*s)'), n=0.183444, Ea=(-0.0112673,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.08447, dn = +|- 0.0100895, dEa = +|- 0.0792862 kJ/mol""")]),
     shortDesc=u"""[Keslin2024]""",
     longDesc=
     u"""
@@ -7415,36 +7497,78 @@ entry(
     """,
 )
 
+# entry(
+#     index=440,
+#     label="NNH + H2 <=> N2H2 + H",
+#     kinetics=Chebyshev(coeffs=[
+#         [-16.1853, -0.14093, -0.0565389, -0.0230449],
+#         [22.9565, 0.196506, 0.0673816, 0.0248334],
+#         [0.404644, -0.0722044, -0.0103491, -0.000799933],
+#         [0.0224619, 0.0197784, -0.0008936, -0.00085877],
+#         [0.0254218, -0.00200337, 0.000655887, -0.00024798],
+#         [0.0181684, -0.00330009, -0.00116873, -0.000353282]],
+# kunits = 'cm^3/(mol*s)', Tmin = (300, 'K'), Tmax = (3000, 'K'), Pmin = (0.01, 'bar'), Pmax = (100, 'bar')),
+# shortDesc = u"""[Keslin2024]""",
+# longDesc =
+# u"""
+# CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+# N2H2 here considers both the cis and trans isomers
+# """,
+# )
+
 entry(
     index=440,
     label="NNH + H2 <=> N2H2 + H",
-    kinetics=Chebyshev(coeffs=[
-        [-16.1853, -0.14093, -0.0565389, -0.0230449],
-        [22.9565, 0.196506, 0.0673816, 0.0248334],
-        [0.404644, -0.0722044, -0.0103491, -0.000799933],
-        [0.0224619, 0.0197784, -0.0008936, -0.00085877],
-        [0.0254218, -0.00200337, 0.000655887, -0.00024798],
-        [0.0181684, -0.00330009, -0.00116873, -0.000353282]],
-kunits = 'cm^3/(mol*s)', Tmin = (300, 'K'), Tmax = (3000, 'K'), Pmin = (0.01, 'bar'), Pmax = (100, 'bar')),
-shortDesc = u"""[Keslin2024]""",
+    kinetics=PDepArrhenius(pressures=([0.01,0.1,1,10,100],'bar'), 
+                           arrhenius=[
+                                Arrhenius(A=(0.000767898,'m^3/(mol*s)'), n=2.65993, Ea=(277.507,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.29307, dn = +|- 0.0319797, dEa = +|- 0.251306 kJ/mol"""),
+                                Arrhenius(A=(0.00125709,'m^3/(mol*s)'), n=2.60123, Ea=(278.276,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.26575, dn = +|- 0.0293221, dEa = +|- 0.230422 kJ/mol"""),
+                                Arrhenius(A=(0.00247905,'m^3/(mol*s)'), n=2.51864, Ea=(279.029,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.22667, dn = +|- 0.0254202, dEa = +|- 0.19976 kJ/mol"""),
+                                Arrhenius(A=(0.00829196,'m^3/(mol*s)'), n=2.37528, Ea=(280.955,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.18119, dn = +|- 0.0207189, dEa = +|- 0.162816 kJ/mol"""),
+                                Arrhenius(A=(0.0662343,'m^3/(mol*s)'), n=2.13428, Ea=(285.24,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.13453, dn = +|- 0.0157042, dEa = +|- 0.123408 kJ/mol""")
+                                ]),
+shortDesc = u"""[Keslin2024]refit""",
 longDesc =
 u"""
-CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ refit to plog
 N2H2 here considers both the cis and trans isomers
 """,
 )
 
+# entry(
+#     index=441,
+#     label="NH2 + NH <=> N2H2 + H",
+#     kinetics=Chebyshev(coeffs=[
+#         [13.8621, -0.0251585, -0.0171172, -0.0091455],
+#         [-0.196208, 0.0312081, 0.0211301, 0.011194],
+#         [-0.0307094, -0.00489202, -0.00317176, -0.00154965],
+#         [-0.00985134, -0.00118606, -0.000856072, -0.000502599],
+#         [-0.00326857, -0.000132028, -9.75936e-05, -5.94732e-05],
+#         [-8.726e-06, -1.4787e-05, -9.5427e-06, -4.62632e-06]],
+#         kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+#     shortDesc=u"""[Keslin2024]""",
+#     longDesc=
+#     u"""
+#     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+#     N2H2 here considers both the cis and trans isomers
+#     Part of the "Thermal de-NOx" mechanism
+#     Also available from [Klippenstein2009a] Table 3, p. 10245 at the (CCSD(T) and CAS+1+2+QC levels
+#     Also available from [Hanson1990a]:
+#         kinetics = Arrhenius(A=(1.50e+15, 'cm^3/(mol*s)'), n=-0.5, Ea=(0, 'cal/mol'), T0=(1, 'K')),
+#     R11 in Table 1, p. 521, T range: 2200-2800 K, Shock Tube
+#     """,
+# )
 entry(
     index=441,
     label="NH2 + NH <=> N2H2 + H",
-    kinetics=Chebyshev(coeffs=[
-        [13.8621, -0.0251585, -0.0171172, -0.0091455],
-        [-0.196208, 0.0312081, 0.0211301, 0.011194],
-        [-0.0307094, -0.00489202, -0.00317176, -0.00154965],
-        [-0.00985134, -0.00118606, -0.000856072, -0.000502599],
-        [-0.00326857, -0.000132028, -9.75936e-05, -5.94732e-05],
-        [-8.726e-06, -1.4787e-05, -9.5427e-06, -4.62632e-06]],
-        kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+    kinetics=PDepArrhenius(pressures=([0.01,0.1,1,10,100],'bar'), 
+                           arrhenius=[
+                                Arrhenius(A=(2.4057e+08,'m^3/(mol*s)'), n=-0.226767, Ea=(-1.48859,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.007, dn = +|- 0.000868342, dEa = +|- 0.0068237 kJ/mol"""),
+                                Arrhenius(A=(2.54935e+08,'m^3/(mol*s)'), n=-0.233466, Ea=(-1.37007,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.00728, dn = +|- 0.000902758, dEa = +|- 0.00709415 kJ/mol"""),
+                                Arrhenius(A=(2.41227e+08,'m^3/(mol*s)'), n=-0.227099, Ea=(-1.48557,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.00706, dn = +|- 0.000874878, dEa = +|- 0.00687507 kJ/mol"""),
+                                Arrhenius(A=(2.79925e+08,'m^3/(mol*s)'), n=-0.244412, Ea=(-1.2009,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.00811, dn = +|- 0.00100514, dEa = +|- 0.00789869 kJ/mol"""),
+                                Arrhenius(A=(5.47128e+08,'m^3/(mol*s)'), n=-0.322155, Ea=(0.118112,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.01243, dn = +|- 0.0015365, dEa = +|- 0.0120743 kJ/mol""")
+                                ]),
     shortDesc=u"""[Keslin2024]""",
     longDesc=
     u"""
@@ -7458,35 +7582,67 @@ entry(
     """,
 )
 
+# entry(
+#     index=442,
+#     label="NNH + H2 <=> H2NN(S) + H",
+#     kinetics=Chebyshev(coeffs=[
+#         [-16.2053, -0.0405214, -0.0265622, -0.0133263],
+#         [23.3627, 0.0415945, 0.0266499, 0.0128245],
+#         [0.268759, -0.000768624, 0.000271828, 0.000812201],
+#         [0.0676891, 0.00145817, 0.00076762, 0.000232901],
+#         [0.0345808, -0.00194565, -0.00124478, -0.000601945],
+#         [0.0144115, -0.00110931, -0.000757264, -0.000404883]],
+#         kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+#     shortDesc=u"""[Keslin2024]""",
+#     longDesc=
+#     u"""
+#     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+#     """,
+# )
+
 entry(
     index=442,
     label="NNH + H2 <=> H2NN(S) + H",
-    kinetics=Chebyshev(coeffs=[
-        [-16.2053, -0.0405214, -0.0265622, -0.0133263],
-        [23.3627, 0.0415945, 0.0266499, 0.0128245],
-        [0.268759, -0.000768624, 0.000271828, 0.000812201],
-        [0.0676891, 0.00145817, 0.00076762, 0.000232901],
-        [0.0345808, -0.00194565, -0.00124478, -0.000601945],
-        [0.0144115, -0.00110931, -0.000757264, -0.000404883]],
-        kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+    kinetics=PDepArrhenius(pressures=([0.01,0.1,1,10,100],'bar'), arrhenius=[
+Arrhenius(A=(0.163585,'m^3/(mol*s)'), n=2.10673, Ea=(285.959,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.04075, dn = +|- 0.00497006, dEa = +|- 0.0390563 kJ/mol"""),
+Arrhenius(A=(0.160225,'m^3/(mol*s)'), n=2.10978, Ea=(286.031,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.04175, dn = +|- 0.00508948, dEa = +|- 0.0399947 kJ/mol"""),
+Arrhenius(A=(0.165998,'m^3/(mol*s)'), n=2.10499, Ea=(285.98,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.04037, dn = +|- 0.00492444, dEa = +|- 0.0386978 kJ/mol"""),
+Arrhenius(A=(0.173832,'m^3/(mol*s)'), n=2.10078, Ea=(286.273,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.04053, dn = +|- 0.00494326, dEa = +|- 0.0388457 kJ/mol"""),
+Arrhenius(A=(0.175825,'m^3/(mol*s)'), n=2.1056, Ea=(287.379,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.04937, dn = +|- 0.00599585, dEa = +|- 0.0471172 kJ/mol""")]),
     shortDesc=u"""[Keslin2024]""",
     longDesc=
     u"""
     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
     """,
 )
+
+# entry(
+#     index=443,
+#     label="NH2 + NH <=> H2NN(S) + H",
+#     kinetics=Chebyshev(coeffs=[
+#         [10.113, -0.0215131, -0.0146657, -0.00786229],
+#         [0.299579, 0.0275924, 0.0187323, 0.00997044],
+#         [0.160776, -0.00553739, -0.00365197, -0.00184416],
+#         [0.070705, -0.00096409, -0.000705731, -0.000423019],
+#         [0.0310207, 3.57075e-05, 2.07511e-05, 7.68633e-06],
+#         [0.0138613, 5.45962e-05, 3.92167e-05, 2.28773e-05]],
+#         kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+#     shortDesc=u"""[Keslin2024]""",
+#     longDesc=
+#     u"""
+#     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+#     """,
+# )
 
 entry(
     index=443,
     label="NH2 + NH <=> H2NN(S) + H",
-    kinetics=Chebyshev(coeffs=[
-        [10.113, -0.0215131, -0.0146657, -0.00786229],
-        [0.299579, 0.0275924, 0.0187323, 0.00997044],
-        [0.160776, -0.00553739, -0.00365197, -0.00184416],
-        [0.070705, -0.00096409, -0.000705731, -0.000423019],
-        [0.0310207, 3.57075e-05, 2.07511e-05, 7.68633e-06],
-        [0.0138613, 5.45962e-05, 3.92167e-05, 2.28773e-05]],
-        kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+    kinetics=PDepArrhenius(pressures=([0.01,0.1,1,10,100],'bar'), arrhenius=[
+Arrhenius(A=(0.143716,'m^3/(mol*s)'), n=1.56238, Ea=(-5.62924,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.04371, dn = +|- 0.00532281, dEa = +|- 0.0418283 kJ/mol"""),
+Arrhenius(A=(0.152801,'m^3/(mol*s)'), n=1.5552, Ea=(-5.51802,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.04414, dn = +|- 0.00537472, dEa = +|- 0.0422363 kJ/mol"""),
+Arrhenius(A=(0.143981,'m^3/(mol*s)'), n=1.56216, Ea=(-5.62728,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.04379, dn = +|- 0.00533211, dEa = +|- 0.0419013 kJ/mol"""),
+Arrhenius(A=(0.167177,'m^3/(mol*s)'), n=1.54459, Ea=(-5.36688,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.04535, dn = +|- 0.00551836, dEa = +|- 0.043365 kJ/mol"""),
+Arrhenius(A=(0.332565,'m^3/(mol*s)'), n=1.46383, Ea=(-4.14668,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.05179, dn = +|- 0.00628241, dEa = +|- 0.0493691 kJ/mol""")]),
     shortDesc=u"""[Keslin2024]""",
     longDesc=
     u"""
@@ -7494,17 +7650,34 @@ entry(
     """,
 )
 
+# entry(
+#     index=444,
+#     label="NH2 + NH <=> NNH + H2",
+#     kinetics=Chebyshev(coeffs=[
+#         [8.44673, -0.0442893, -0.0298853, -0.0157439],
+#         [1.75624, 0.0497843, 0.0333517, 0.0173474],
+#         [0.326849, -0.00458896, -0.0028004, -0.00120305],
+#         [0.0786275, -8.12092e-05, -0.000116567, -0.000117531],
+#         [0.0281961, -0.00123203, -0.000829836, -0.000435818],
+#         [0.00876269, -0.000729313, -0.000496902, -0.000266152]],
+#         kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+#     shortDesc=u"""[Keslin2024]""",
+#     longDesc=
+#     u"""
+#     CCSDT(Q)/aug-cc-pVTZ//B2PLYPD3/aug-cc-pVTZ
+#     """,
+# )
+
 entry(
     index=444,
     label="NH2 + NH <=> NNH + H2",
-    kinetics=Chebyshev(coeffs=[
-        [8.44673, -0.0442893, -0.0298853, -0.0157439],
-        [1.75624, 0.0497843, 0.0333517, 0.0173474],
-        [0.326849, -0.00458896, -0.0028004, -0.00120305],
-        [0.0786275, -8.12092e-05, -0.000116567, -0.000117531],
-        [0.0281961, -0.00123203, -0.000829836, -0.000435818],
-        [0.00876269, -0.000729313, -0.000496902, -0.000266152]],
-        kunits='cm^3/(mol*s)', Tmin=(300, 'K'), Tmax=(3000, 'K'), Pmin=(0.01, 'bar'), Pmax=(100, 'bar')),
+    kinetics=PDepArrhenius(pressures=([0.01,0.1,1,10,100],'bar'), 
+                           arrhenius=[
+                               Arrhenius(A=(0.000159947,'m^3/(mol*s)'), n=2.48035, Ea=(8.21804,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.0966, dn = +|- 0.0114742, dEa = +|- 0.0901678 kJ/mol"""), 
+                               Arrhenius(A=(0.00016707,'m^3/(mol*s)'), n=2.47565, Ea=(8.36845,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.0972, dn = +|- 0.0115413, dEa = +|- 0.0906949 kJ/mol"""), 
+                               Arrhenius(A=(0.000161017,'m^3/(mol*s)'), n=2.47955, Ea=(8.22698,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.09645, dn = +|- 0.0114569, dEa = +|- 0.0900318 kJ/mol"""), 
+                               Arrhenius(A=(0.000186162,'m^3/(mol*s)'), n=2.46332, Ea=(8.62444,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.09666, dn = +|- 0.011481, dEa = +|- 0.0902211 kJ/mol"""), 
+                               Arrhenius(A=(0.000335701,'m^3/(mol*s)'), n=2.39823, Ea=(10.3916,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K'), comment="""Fitted to 541 data points; dA = *|/ 1.10035, dn = +|- 0.0118989, dEa = +|- 0.0935049 kJ/mol""")]),
     shortDesc=u"""[Keslin2024]""",
     longDesc=
     u"""
@@ -7537,3 +7710,161 @@ Klippenstein 2011
 )
 
 
+
+# entry(
+#     index=448,
+#     label = "NH2OH <=> HON + H2",
+#     elementary_high_p = True,
+#     kinetics = Arrhenius(
+#         A = (2.4E11,"s^-1"),
+#         n = 0,
+#         Ea = (151.9,"kJ/mol"),
+#         T0 = (1,"K"),
+#         Tmin = (200,"K"),
+#         Tmax = (2000,"K")
+        
+#     )
+# )
+
+# entry(
+#     index=449,
+#     label = "NH2OH <=> H + NH2O",
+#     elementary_high_p = True,
+#     kinetics = Arrhenius(
+#         A = (6.4E10,"s^-1"),
+#         n = 0,
+#         Ea = (77.1,"kJ/mol"),
+#         T0 = (1,"K"),
+#         Tmin = (200,"K"),
+#         Tmax = (2000,"K")
+        
+#     )
+# )
+
+# entry(
+#     index=450,
+#     label = "NH2OH <=> HNOH + H",
+#     elementary_high_p = True,
+#     duplicate=True,
+#     kinetics = Arrhenius(
+#         A = (6.4E10,"s^-1"),
+#         n = 0,
+#         Ea = (131.1,"kJ/mol"),
+#         T0 = (1,"K"),
+#         Tmin = (200,"K"),
+#         Tmax = (2000,"K")
+        
+#     )
+# )
+
+# entry(
+#     index=451,
+#     label = "NH2OH <=> HNOH + H",
+#     elementary_high_p = True,
+#     duplicate=True,
+#     kinetics = Arrhenius(
+#         A = (5E10,"s^-1"),
+#         n = 0,
+#         Ea = (107.9,"kJ/mol"),
+#         T0 = (1,"K"),
+#         Tmin = (200,"K"),
+#         Tmax = (2000,"K")
+        
+#     )
+# )
+
+# entry(
+#     index=452,
+#     label = "NH2OH <=> NH3O",
+#     elementary_high_p = True,
+#     duplicate=True,
+#     kinetics = Arrhenius(
+#         A = (5.56E19,"s^-1"),
+#         n = -3.59,
+#         Ea = (6.6,"kJ/mol"),
+#         T0 = (1,"K"),
+#         Tmin = (200,"K"),
+#         Tmax = (2000,"K")
+        
+#     )
+# )
+
+# entry(
+#     index=453,
+#     label = "NH3O <=> H2 + HNO",
+#     elementary_high_p = True,
+#     duplicate=True,
+#     kinetics = Arrhenius(
+#         A = (5.9E10,"s^-1"),
+#         n = 0,
+#         Ea = (129.9,"kJ/mol"),
+#         T0 = (1,"K"),
+#         Tmin = (200,"K"),
+#         Tmax = (2000,"K")
+        
+#     )
+# )
+
+# entry(
+#     index=454,
+#     label = "NH3O <=> NH3 + O(S)",
+#     elementary_high_p = True,
+#     duplicate=True,
+#     kinetics = Arrhenius(
+#         A = (1.9E12,"s^-1"),
+#         n = 0,
+#         Ea = (249.9,"kJ/mol"),
+#         T0 = (1,"K"),
+#         Tmin = (200,"K"),
+#         Tmax = (2000,"K")
+        
+#     )
+# )
+
+# entry(
+#     index=455,
+#     label = "NH2 + OH <=> NH3 + O(S)",
+#     elementary_high_p = True,
+#     duplicate=True,
+#     kinetics = Arrhenius(
+#         A = (26.3,"L/(mol*s)"),
+#         n = 2.36,
+#         Ea = (255.3,"kJ/mol"),
+#         T0 = (1,"K"),
+#         Tmin = (200,"K"),
+#         Tmax = (2000,"K")
+        
+#     )
+# )
+
+# entry(
+#     index=456,
+#     label = "NH2 + OH <=> NH(S) + H2O",
+#     elementary_high_p = True,
+#     duplicate=True,
+#     kinetics = Arrhenius(
+#         A = (8.4,"L/(mol*s)"),
+#         n = 2.79,
+#         Ea = (180.1,"kJ/mol"),
+#         T0 = (1,"K"),
+#         Tmin = (200,"K"),
+#         Tmax = (2000,"K")
+        
+#     )
+# )
+
+# entry(
+#     index=457,
+#     label = "NH2OH <=> NH(S) + H2O",
+#     elementary_high_p = True,
+#     duplicate=True,
+#     kinetics = Arrhenius(
+#         A = (5.7E10,"s^-1"),
+#         n = 0,
+#         Ea = (105.4,"kJ/mol"),
+#         T0 = (1,"K"),
+#         Tmin = (200,"K"),
+#         Tmax = (2000,"K")
+        
+#     )
+# )

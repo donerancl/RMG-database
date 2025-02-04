@@ -7,6 +7,12 @@ HNO
 2 N u0 p1 c0 {1,D} {3,S}
 3 H u0 p0 c0 {2,S}
 
+HNO(T)
+multiplicity 3
+1 N u1 p1 c0 {2,S} {3,S}
+2 O u1 p2 c0 {1,S}
+3 H u0 p0 c0 {1,S}
+
 HNO2(T)
 multiplicity 3
 1 O u1 p2 c0 {3,S}
@@ -20,6 +26,23 @@ NH3O
 3 H u0 p0 c0 {2,S}
 4 H u0 p0 c0 {2,S}
 5 H u0 p0 c0 {2,S}
+
+NH
+multiplicity 3
+1 N u2 p1 c0 {2,S}
+2 H u0 p0 c0 {1,S}
+
+H2NO
+multiplicity 2
+1 N u0 p1 c0 {2,S} {3,S} {4,S}
+2 O u1 p2 c0 {1,S}
+3 H u0 p0 c0 {1,S}
+4 H u0 p0 c0 {1,S}
+
+O2
+multiplicity 3
+1 O u1 p2 c0 {2,S}
+2 O u1 p2 c0 {1,S}
 
 H2
 1 H u0 p0 c0 {2,S}
@@ -73,3 +96,14 @@ OH
 multiplicity 2
 1 O u1 p2 c0 {2,S}
 2 H u0 p0 c0 {1,S}
+
+HNOO 
+multiplicity 3
+1 N u1 p1 c0 {2,S} {4,S}
+2 O u0 p2 c0 {1,S} {3,S}
+3 O u1 p2 c0 {2,S}
+4 H u0 p0 c0 {1,S}
+
+N
+multiplicity 4
+1 N u3 p1 c0

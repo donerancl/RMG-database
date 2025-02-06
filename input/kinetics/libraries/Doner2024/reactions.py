@@ -85,6 +85,30 @@ entry(
 )
 
 
+entry(
+    index=4,
+    label = 'HNONO <=> NO1 + HNO(T)',
+    elementary_high_p=True,
+    kinetics = Arrhenius(A=(0.000000614,'m^3/(mol*s)'), n=2.756, Ea=(32.5005,'kJ/mol'), T0=(1,'K'), comment="""estimated 3 orders of magnitude slower than the reaction with NO1 + HNO(S) products
+which was Estimated using template [R_R;N3J] for rate rule [Od_N3d;N3dJ_O]
+Euclidian distance = 3.605551275463989
+family: R_Addition_MultipleBond
+Ea raised from 27.8 to 32.5 kJ/mol to match endothermicity of reaction.""")
+)
+entry(
+    index=5,
+    label = 'HNOH <=> H + HNO(T)',
+    elementary_high_p=True,
+    kinetics = Arrhenius(A=(1.23922e+23,'s^-1'), n=-3.67073, Ea=(323.848,'kJ/mol'), T0=(1,'K'), Tmin=(303.03,'K'), Tmax=(2000,'K'), comment="""Fitted to 29 data points; dA = *|/ 1.52491, dn = +|- 0.055859, dEa = +|- 0.292019 kJ/mol""")
+)
+
+entry(
+    index=6,
+    label = 'H2NO <=> H + HNO(T)',
+    elementary_high_p=True,
+    kinetics =Arrhenius(A=(5.82313e+24,'s^-1'), n=-4.18073, Ea=(328.689,'kJ/mol'), T0=(1,'K'), Tmin=(303.03,'K'), Tmax=(2000,'K'), comment="""Fitted to 29 data points; dA = *|/ 1.52491, dn = +|- 0.055859, dEa = +|- 0.292019 kJ/mol""")
+)
+
 
 
 # entry(

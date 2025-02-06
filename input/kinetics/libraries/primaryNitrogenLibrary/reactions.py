@@ -7709,8 +7709,6 @@ Klippenstein 2011
 """,
 )
 
-
-
 # entry(
 #     index=448,
 #     label = "NH2OH <=> HON + H2",

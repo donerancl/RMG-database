@@ -16,7 +16,7 @@ Notes:
   'The Low T' rate is reported in the comments. You can also use the "primaryNitrogenLibrary/LowT" sub-library, and give it priority over this library
 - This library should be used along with a library which handles well the transition of ground/excited states of small radicals (e.g., FFCM)
 - At present (when this library was written) RMG does not differentiate between cis and trans conformers.
-  When data was available seperately for the production or consumption of two conformers
+  When data was available seperately for the prfoduction or consumption of two conformers
   (e.g.: 'A + B <=> cis-X + C' and 'A + B <=> trans-X + C')
   the two rates were summed and reported in this library as a duplicate reaction (using MultiArrhenius, unless otherwise mentioned).
   Such instances are marked with the comment 'conformer-dup'.
@@ -37,6 +37,7 @@ This library contains the following subsets:
 * C1-oxygenates
 
 Reference legend:
+[Abian2015] Abian, M., Alzueta, M. U., & Glarborg, P. (2015). Formation of NO from N2 /O2 mixtures in a flow reactor: Toward an accurate prediction of thermal NO. International Journal of Chemical Kinetics, 47(8), 518-532. https://doi.org/10.1002/kin.20929
 [Baulch1992a] D.L. Baulch, C.J. Cobos, R.A. Cox, C. Esser, P. Frank, Th. Just, J.A. Kerr, M.J. Philling, J. Troe, R.W. Walker, J. Warnatz, "Evaluated Kinetic Data for Combustion Modelling", Journal of Physical and Chemical Reference Data, 1992, 21(3), 411, doi: 10.1063/1.555908
 [Baulch1992b] R. Atkinson, D.L. Baulch, R.A. Cox, R.F. Hampson, J.A. Kerr, J. Troe, "Evaluated Kinetic and Photochemical Data for Atmospheric Chemistry: Supplement IV", Journal of Physical and Chemical Reference Data, 1992, 21, 1125, doi: 10.1063/1.555918
 [Baulch1994] D.L. Baulch et al., Journal of Physical and Chemical Reference Data, 1994, 23, 847, doi: 10.1063/1.555953
@@ -53,6 +54,7 @@ Reference legend:
 [DeanBozz2000] (RMG's Nitrogen_Dean_and_Bozzelli library) Anthony M. Dean, Joseph W. Bozzelli, Combustion Chemistry of Nitrogen, in: Gas-Phase Combustion Chemistry, Editor: W.C. Gardiner, 2000, 125-341, doi: 10.1007/978-1-4612-1310-9_2
 [DeRuyck2001] A.A. Konnov, J. De Ruyck, Comb. Flame, 2001, 125(4), 1258-1264, doi: 10.1016/S0010-2180(01)00250-4
 [Dievart2020] P. Dievart, L. Catoire, J. Phys. Chem. A, 2020, 124(30), 6214-6236, doi: 10.1021/acs.jpca.0c03144
+[Fernandez1998] Abel Fernandez, A. Goumri, and Arthur Fontijn The Journal of Physical Chemistry A 1998 102 (1), 168-172 DOI: 10.1021/jp972365k
 [Flower1977] W. L. Flower , R. K. Hanson, c. H. Kruger, Comb. Sci. Tech., 1977, 15(3-4), 115-128, doi: 10.1080/00102207708946777
 [Friedrichs2011] J. Dammeier, G. Friedrichs, J. Phys. Chem. A, 2011, 115, 14382-14390, doi: 10.1021/jp208715c
 [Friedrichs2012] J. Dammeier, N. Faßheber, G. Friedrichs, Phys. Chem. Chem. Phys., 2012, 15, 1030-1037, doi: 10.1039/C1CP22123J
@@ -172,10 +174,11 @@ entry(
     index = 1,
     label = "N + NO <=> O + N2",
     degeneracy = 1,
-    kinetics = Arrhenius(A=(4.29e+13, 'cm^3/(mol*s)','+|-',8.58e+12), n=0, Ea=(1564, 'cal/mol'), T0=(1, 'K'), Tmin=(1400, 'K'), Tmax=(3500, 'K')),
-    shortDesc = u"""[Hanson1990b]""",
+    kinetics = Arrhenius(A=(9.4E+12, 'cm^3/(mol*s)'), n=0.14, Ea=(0, 'cal/mol'), T0=(1, 'K'), Tmin=(250, 'K'), Tmax=(3000, 'K')),
+    shortDesc = u"""[Abian2015]""",
     longDesc =
 u"""
+rate proposed by [Abian2015] according to multiple experiments
 Part of the "Thermal (Zeldovich) NO" mechanism
 See [Hanson1990b] R1; p. 856
 Uncertainty: +/-20% at 1400 K to +/- 10% at 3500 K
@@ -193,10 +196,11 @@ entry(
     index = 2,
     label = "N + O2 <=> NO + O",
     degeneracy = 1,
-    kinetics = Arrhenius(A=(9.0e+09, 'cm^3/(mol*s)'), n=1, Ea=(6500, 'cal/mol'), T0=(1, 'K'), Tmin=(298, 'K'), Tmax=(5000, 'K')),
-    shortDesc = u"""[Baulch1994]""",
+    kinetics = Arrhenius(A=(5.9E+09, 'cm^3/(mol*s)'), n=1.01, Ea=(6280, 'cal/mol'), T0=(1, 'K'), Tmin=(298, 'K'), Tmax=(5000, 'K')),
+    shortDesc = u"""[Baulch2005]""",
     longDesc =
 u"""
+[Baulch2005] recommends fit to experimental data from [Fernandez1998]
 Part of the "Thermal (Zeldovich) NO" mechanism
 See [Baulch1994] p. 859
 [DeanBozz2000] (p. 230) cite [Cohen1992], which I couldn't access.
@@ -209,14 +213,42 @@ Also available in RMG's libraries as:
 """,
 )
 
+# entry(
+#     index = 3,
+#     label = "NO + H <=> N + OH",
+#     degeneracy = 1,
+#     kinetics = Arrhenius(A=(1.70e+14, 'cm^3/(mol*s)'), n=0, Ea=(47574, 'cal/mol'), T0=(1, 'K'), Tmin=(1750, 'K'), Tmax=(4200, 'K')),
+#     shortDesc = u"""[Hanson1984c]""",
+#     longDesc =
+# u"""
+# Part of the "Thermal (Zeldovich) NO" mechanism
+# 5.4 on p. 398
+# T range: 1750-4200 K
+# Also available from Han 2008 (https://doi.org/10.1142/S021963360800399X)
+# [DeanBozz2000] (p. 231) give A = 6.4e+12 cm^3/(mol*s); n = 0.1; Ea = 21300 cal/mol, citing [Cohen1991]
+# But [Cohen1991] says that this rate "cannot be fixed more precisely" than an upper boundary of 4.1e+10 (p. 95, k2a)
+# [GRI] used a fit to low and high T expressions from Atkinson et al., (1989) J. Phys. Chem. Ref. Data 18 88 and Hanson et al., Combustion Chemistry , Springer-Verlag, N.Y., p. 361
+# [GRI] optimized this rate and recommended 59% of the fit's A factor.
+# [GlarGim] has a ridiculously long citation chain:
+# Skreiberg et al, Combust. Flame 136, 501-518 (2004) <-- P. Glarborg et al., Combust. Flame 115 (1998) 1-27 <-- P. Glarborg et al., Int. J. Chem. Kinet., 27 (1995), p. 1207 <-- P. Glarborg et al., Int. J. Chem. Kinet., 26, 421 (1994) <-- J.A. Miller, C. T. Bowman, Prog. Energy and Comb. Sci., 15, 287 (1989) <-- J.A. Miller et al., 20th Symp. (Int.) Combust., pp. 673-684, The Combustion Institute, Pittsburgh (1985) <-- W.L. Flower et al., Comb. Sci. Tech. 15, 115 (1977).
+# The origin of the data is in shock tube experiments by [Flower1977] (p. 14, Fig. 7)
+# Also available in other RMG libraries as:
+# [DeanBozz2000] *reverse direction given: A = 1.1e+14 cm^3/(mol*s); n = 0; Ea = 1122 cal/mol
+# [GlarZha]  *reverse direction given: A = 3.8e+13 cm^3/(mol*s); n = 0; Ea = 0 cal/mol
+# [GlarGim]  *reverse direction given: A = 3.8e+13 cm^3/(mol*s); n = 0; Ea = 0 cal/mol
+# [GRI]      *reverse direction given: A = 3.36e+13 cm^3/(mol*s); n = 0; Ea = 385 cal/mol
+# [Flower1977]                         A = 2.22e+14 cm^3/(mol*s), n = 0; Ea = 50500 cal/mol
+# """,
+# # )
 entry(
     index = 3,
-    label = "NO + H <=> N + OH",
+    label = "N + OH <=> NO + H",
     degeneracy = 1,
-    kinetics = Arrhenius(A=(1.70e+14, 'cm^3/(mol*s)'), n=0, Ea=(47574, 'cal/mol'), T0=(1, 'K'), Tmin=(1750, 'K'), Tmax=(4200, 'K')),
-    shortDesc = u"""[Hanson1984c]""",
+    kinetics = Arrhenius(A=(1.08E+14, 'cm^3/(mol*s)'), n=-0.2, Ea=(0, 'cal/mol'), T0=(1, 'K'), Tmin=(100, 'K'), Tmax=(2500, 'K')),
+    shortDesc = u"""[Baulch2005]""",
     longDesc =
 u"""
+[Baulch2005] recommends value based on fit of Howard and Smith experiment from 1980
 Part of the "Thermal (Zeldovich) NO" mechanism
 5.4 on p. 398
 T range: 1750-4200 K
@@ -7709,160 +7741,3 @@ Klippenstein 2011
 """,
 )
 
-# entry(
-#     index=448,
-#     label = "NH2OH <=> HON + H2",
-#     elementary_high_p = True,
-#     kinetics = Arrhenius(
-#         A = (2.4E11,"s^-1"),
-#         n = 0,
-#         Ea = (151.9,"kJ/mol"),
-#         T0 = (1,"K"),
-#         Tmin = (200,"K"),
-#         Tmax = (2000,"K")
-        
-#     )
-# )
-
-# entry(
-#     index=449,
-#     label = "NH2OH <=> H + NH2O",
-#     elementary_high_p = True,
-#     kinetics = Arrhenius(
-#         A = (6.4E10,"s^-1"),
-#         n = 0,
-#         Ea = (77.1,"kJ/mol"),
-#         T0 = (1,"K"),
-#         Tmin = (200,"K"),
-#         Tmax = (2000,"K")
-        
-#     )
-# )
-
-# entry(
-#     index=450,
-#     label = "NH2OH <=> HNOH + H",
-#     elementary_high_p = True,
-#     duplicate=True,
-#     kinetics = Arrhenius(
-#         A = (6.4E10,"s^-1"),
-#         n = 0,
-#         Ea = (131.1,"kJ/mol"),
-#         T0 = (1,"K"),
-#         Tmin = (200,"K"),
-#         Tmax = (2000,"K")
-        
-#     )
-# )
-
-# entry(
-#     index=451,
-#     label = "NH2OH <=> HNOH + H",
-#     elementary_high_p = True,
-#     duplicate=True,
-#     kinetics = Arrhenius(
-#         A = (5E10,"s^-1"),
-#         n = 0,
-#         Ea = (107.9,"kJ/mol"),
-#         T0 = (1,"K"),
-#         Tmin = (200,"K"),
-#         Tmax = (2000,"K")
-        
-#     )
-# )
-
-# entry(
-#     index=452,
-#     label = "NH2OH <=> NH3O",
-#     elementary_high_p = True,
-#     duplicate=True,
-#     kinetics = Arrhenius(
-#         A = (5.56E19,"s^-1"),
-#         n = -3.59,
-#         Ea = (6.6,"kJ/mol"),
-#         T0 = (1,"K"),
-#         Tmin = (200,"K"),
-#         Tmax = (2000,"K")
-        
-#     )
-# )
-
-# entry(
-#     index=453,
-#     label = "NH3O <=> H2 + HNO",
-#     elementary_high_p = True,
-#     duplicate=True,
-#     kinetics = Arrhenius(
-#         A = (5.9E10,"s^-1"),
-#         n = 0,
-#         Ea = (129.9,"kJ/mol"),
-#         T0 = (1,"K"),
-#         Tmin = (200,"K"),
-#         Tmax = (2000,"K")
-        
-#     )
-# )
-
-# entry(
-#     index=454,
-#     label = "NH3O <=> NH3 + O(S)",
-#     elementary_high_p = True,
-#     duplicate=True,
-#     kinetics = Arrhenius(
-#         A = (1.9E12,"s^-1"),
-#         n = 0,
-#         Ea = (249.9,"kJ/mol"),
-#         T0 = (1,"K"),
-#         Tmin = (200,"K"),
-#         Tmax = (2000,"K")
-        
-#     )
-# )
-
-# entry(
-#     index=455,
-#     label = "NH2 + OH <=> NH3 + O(S)",
-#     elementary_high_p = True,
-#     duplicate=True,
-#     kinetics = Arrhenius(
-#         A = (26.3,"L/(mol*s)"),
-#         n = 2.36,
-#         Ea = (255.3,"kJ/mol"),
-#         T0 = (1,"K"),
-#         Tmin = (200,"K"),
-#         Tmax = (2000,"K")
-        
-#     )
-# )
-
-# entry(
-#     index=456,
-#     label = "NH2 + OH <=> NH(S) + H2O",
-#     elementary_high_p = True,
-#     duplicate=True,
-#     kinetics = Arrhenius(
-#         A = (8.4,"L/(mol*s)"),
-#         n = 2.79,
-#         Ea = (180.1,"kJ/mol"),
-#         T0 = (1,"K"),
-#         Tmin = (200,"K"),
-#         Tmax = (2000,"K")
-        
-#     )
-# )
-
-# entry(
-#     index=457,
-#     label = "NH2OH <=> NH(S) + H2O",
-#     elementary_high_p = True,
-#     duplicate=True,
-#     kinetics = Arrhenius(
-#         A = (5.7E10,"s^-1"),
-#         n = 0,
-#         Ea = (105.4,"kJ/mol"),
-#         T0 = (1,"K"),
-#         Tmin = (200,"K"),
-#         Tmax = (2000,"K")
-        
-#     )
-# )

@@ -55,6 +55,12 @@ NH2OH
 4 H u0 p0 c0 {2,S}
 5 H u0 p0 c0 {1,S}
 
+NH2
+multiplicity 2
+1 N u1 p1 c0 {2,S} {3,S}
+2 H u0 p0 c0 {1,S}
+3 H u0 p0 c0 {1,S}
+
 O[S]
 multiplicity 3
 1 O u2 p2 c0

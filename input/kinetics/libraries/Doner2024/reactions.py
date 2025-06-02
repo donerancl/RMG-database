@@ -1618,3 +1618,418 @@ entry(
     ),
 )
 
+
+entry(
+    index =25,
+    label = "O2 + H2NN <=> HO2 + NNH",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(0.116514,'cm^3/(mol*s)'), n=4.05058, Ea=(21.9516,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS1 in O2 + H2NN <=> HO2 + NNH:
+Methods that successfully generated a TS guess:
+heuristics,heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 1
+
+Optimized TS geometry:
+O       0.00000100    1.42237100   -0.03503400
+O       0.00000200    0.85455600    1.08372700
+N      -0.00000100   -1.26376600   -0.11261300
+N      -0.00000100   -0.94245400   -1.25281000
+H       0.00000100   -0.39868400    0.71430600
+H      -0.00000100   -2.25955200    0.17410800
+
+
+No rotors considered for this TS.
+""",
+)
+
+entry(
+    index =26,
+    label = "HO2 + HON <=> O2 + HNOH",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(0.0718548,'cm^3/(mol*s)'), n=4.12786, Ea=(0.53819,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS2 in HO2 + HON <=> O2 + HNOH:
+Methods that successfully generated a TS guess:
+heuristics,heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 1
+
+Optimized TS geometry:
+O      -0.86547700    1.30296300    1.30466100
+N      -0.02068400    1.12543300    0.31398600
+H      -0.91019800    2.25140400    1.49501600
+O       0.97945200   -1.33210200   -1.18913300
+O       0.14775000   -1.28609600   -0.23256400
+H       0.04384500   -0.21839500    0.04292400
+
+
+No rotors considered for this TS.
+""",
+)
+
+entry(
+    index = 27,
+    label = "HO2 + HNOH <=> HON + H2O2",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(2.56014e-05,'cm^3/(mol*s)'), n=4.86012, Ea=(13.9694,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS8 in HO2 + HNOH <=> HON + H2O2:
+Methods that successfully generated a TS guess:
+heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 2
+
+Optimized TS geometry:
+O      -0.21023800   -1.24633000   -0.82319300
+N       0.21974600   -1.30906300    0.43105900
+H       0.10573200   -0.17030400    0.80770300
+H      -0.06840300   -2.11939100   -1.21108800
+O      -0.14739400    1.01380800    0.96334000
+O       0.09930400    1.61906100   -0.23529300
+H      -0.76596500    1.64003200   -0.66448600
+
+1D rotors:
+pivots: [1, 2], dihedral: [4, 1, 2, 3], rotor symmetry: 1, max scan energy: 36.40 kJ/mol
+""",
+)
+
+entry(
+    index = 28,
+    label = "N + HNOH <=> NH + HON",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(0.0777455,'cm^3/(mol*s)'), n=4.22138, Ea=(33.4712,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS12 in N + HNOH <=> NH + HON:
+
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 1
+
+Optimized TS geometry:
+O       0.00000000   -0.74272600   -0.97988800
+N       0.00000000   -0.77711600    0.35093400
+H       0.00000000    0.45678600    0.64214800
+H       0.00000000   -1.66322100   -1.27283100
+N       0.00000000    1.70426700    0.79931000
+
+1D rotors:
+pivots: [1, 2], dihedral: [4, 1, 2, 3], rotor symmetry: 1, max scan energy: 33.38 kJ/mol
+""",
+)
+
+entry(
+    index = 29,
+    label = "NH + HNOH <=> HON + NH2",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(11.7577,'cm^3/(mol*s)'), n=3.64546, Ea=(10.9985,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS17 in NH + HNOH <=> HON + NH2:
+Methods that successfully generated a TS guess:
+heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 2
+
+Optimized TS geometry:
+O      -0.12907800   -0.75539500   -0.96669700
+N       0.17660800   -0.76808100    0.33695000
+H      -0.02014500    0.35311500    0.67176400
+H      -0.04406800   -1.66989000   -1.26224600
+N      -0.20010200    1.66779700    0.78514900
+H       0.21678600    1.99046100   -0.10452500
+
+1D rotors:
+pivots: [1, 2], dihedral: [4, 1, 2, 3], rotor symmetry: 1, max scan energy: 40.27 kJ/mol
+""",
+)
+
+entry(
+    index = 30,
+    label = "NO + H2NN <=> HNO + NNH",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(11.4894,'cm^3/(mol*s)'), n=3.24612, Ea=(18.9232,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS20 in NO + H2NN <=> HNO + NNH:
+Methods that successfully generated a TS guess:
+heuristics,heuristics,heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 1
+
+Optimized TS geometry:
+N       0.34508400   -0.93217600   -0.55414300
+N       0.67424000   -1.61021500   -1.41370100
+H       0.19481400    0.27059600   -0.49340700
+H       0.05580500   -1.12563100    0.49436500
+N      -0.21721400    1.04631500    0.60963300
+O      -0.37763400    0.22337100    1.45682000
+
+
+No rotors considered for this TS.
+""",
+)
+
+entry(
+    index = 31,
+    label = "HON + N2H2 <=> NNH + HNOH",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(7.12293e-07,'cm^3/(mol*s)'), n=5.49776, Ea=(21.1187,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS21 in HON + N2H2 <=> NNH + HNOH:
+Methods that successfully generated a TS guess:
+heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 1
+
+Optimized TS geometry:
+O       0.00000000    1.56380800   -0.20273300
+N       0.00000000    1.01571300    1.00700300
+H       0.00000000    2.52232600   -0.07958500
+N      -0.00000000   -1.34848000   -0.92745900
+N      -0.00000000   -1.41615400    0.27381600
+H      -0.00000000   -2.30206600   -1.33277200
+H      -0.00000000   -0.31498400    0.71591200
+
+
+No rotors considered for this TS.
+""",
+)
+
+entry(
+    index = 32,
+    label = "HNOH + HNOH <=> HON + NH2OH",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(3.55381e-06,'cm^3/(mol*s)'), n=5.14614, Ea=(20.6811,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS33 in HNOH + HNOH <=> HON + NH2OH:
+Methods that successfully generated a TS guess:
+heuristics,heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 2
+
+Optimized TS geometry:
+O      -0.14316300   -1.25717500   -0.82429900
+N       0.57436600   -1.27470500    0.30541000
+H       0.30797900   -0.12214000    0.76222400
+H      -0.06225100   -2.13771000   -1.21069600
+O      -0.35776400    1.65236800   -0.18619700
+N       0.05424800    1.07454800    1.00231500
+H       0.99418800    1.45935500    1.10845100
+H      -1.29307400    1.44005300   -0.23988300
+
+
+No rotors considered for this TS.
+""",
+)
+
+entry(
+    index = 33,
+    label = "HON + HONO <=> NO2 + HNOH",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(8.06578e-12,'cm^3/(mol*s)'), n=6.61938, Ea=(59.8765,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS34 in HON + HONO <=> NO2 + HNOH:
+Methods that successfully generated a TS guess:
+heuristics,heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 2
+
+Optimized TS geometry:
+O      -0.84050800    1.14047700   -1.36707200
+N       0.19003700    1.43143400   -0.59866600
+H      -0.84687400    1.78562200   -2.08763600
+O      -0.05162100   -0.07509400    1.34780200
+O       0.59031200   -1.55113200   -0.04709700
+N       0.23894300   -1.27104400    1.05037600
+H       0.12526600    0.68685600    0.35637300
+
+1D rotors:
+pivots: [1, 2], dihedral: [3, 1, 2, 7], rotor symmetry: 3, max scan energy: 22.95 kJ/mol
+""",
+)
+
+entry(
+    index =34,
+    label = "H + NH2OOH <=> H2 + NH2OO",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(374.885,'cm^3/(mol*s)'), n=3.34678, Ea=(37.948,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS43 in H + NH2OOH <=> H2 + NH2OO:
+
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 2
+
+Optimized TS geometry:
+H       1.85779500    1.02906500    1.37588700
+O      -0.20549600   -0.59005800    0.27842600
+O      -0.20590200    0.66752100    0.89047900
+N      -0.03454400   -0.47367600   -1.08356000
+H       0.89759200   -0.10337700   -1.25434600
+H      -0.72091600    0.19216900   -1.42622800
+H       0.82385400    0.84089700    1.17433500
+
+1D rotors:
+pivots: [2, 4], dihedral: [3, 2, 4, 5], rotor symmetry: 1, max scan energy: 30.76 kJ/mol
+pivots: [2, 3], dihedral: [4, 2, 3, 7], rotor symmetry: 1, max scan energy: 47.22 kJ/mol
+""",
+)
+
+entry(
+    index =35,
+    label = "HO2 + NH2OOH <=> H2O2 + NH2OO",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(2.36524e-10,'cm^3/(mol*s)'), n=6.27482, Ea=(44.3615,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS47 in HO2 + NH2OOH <=> H2O2 + NH2OO:
+Methods that successfully generated a TS guess:
+heuristics,heuristics,heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 2
+
+Optimized TS geometry:
+O       1.16417100    0.96449900    0.70319800
+O       1.57316500   -0.27078500    1.09235200
+H       1.93205200   -0.66965700    0.28749000
+O      -0.85277500   -0.69429300   -0.37759000
+O      -1.07142300    0.49915700    0.22945000
+N      -0.72689300   -0.54154400   -1.76340700
+H      -0.01848000    0.17621100   -1.90536100
+H      -1.61240600   -0.15818700   -2.08539300
+H       0.00594500    0.84078800    0.58728700
+
+1D rotors:
+* Invalidated! pivots: [1, 2], dihedral: [9, 1, 2, 3], invalidation reason: initial and final points are inconsistent by more than 5.00 kJ/mol But unable to propose troubleshooting methods.initial and final points are inconsistent by more than 5.00 kJ/mol But unable to propose troubleshooting methods.
+pivots: [4, 6], dihedral: [5, 4, 6, 7], rotor symmetry: 1, max scan energy: 18.72 kJ/mol
+""",
+)
+
+entry(
+    index = 36,
+    label = "NH2 + NH2OOH <=> NH2OO + NH3",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(4.28529e-05,'cm^3/(mol*s)'), n=4.69051, Ea=(15.9231,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS48 in NH2 + NH2OOH <=> NH2OO + NH3:
+Methods that successfully generated a TS guess:
+heuristics,heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 2
+
+Optimized TS geometry:
+N       1.53068600    0.90542400    1.09744100
+H       1.58702900    1.76436200    1.64629500
+H       1.47828600    0.15272600    1.78497000
+O      -0.83453100   -0.57497800   -0.01714600
+O      -0.73532100    0.78009600    0.31785200
+N      -0.47187600   -0.78444200   -1.33520300
+H       0.50851800   -0.53190800   -1.43217100
+H      -1.02731000   -0.15250700   -1.90500000
+H       0.35276700    0.90805900    0.49619400
+
+1D rotors:
+pivots: [4, 6], dihedral: [5, 4, 6, 7], rotor symmetry: 3, max scan energy: 30.54 kJ/mol
+* Invalidated! pivots: [4, 5], dihedral: [6, 4, 5, 9], invalidation reason: initial and final points are inconsistent by more than 5.00 kJ/mol But unable to propose troubleshooting methods.initial and final points are inconsistent by more than 5.00 kJ/mol But unable to propose troubleshooting methods.
+""",
+)
+
+entry(
+    index = 37,
+    label = "NH + NH2OOH <=> NH2 + NH2OO",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(9.21477e-07,'cm^3/(mol*s)'), n=5.51288, Ea=(36.7768,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS50 in NH + NH2OOH <=> NH2 + NH2OO:
+Methods that successfully generated a TS guess:
+heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 2
+
+Optimized TS geometry:
+N       1.78377800    0.47107300    0.90159300
+H       1.81956600    0.41015800    1.93084200
+O      -0.66389800   -0.89511400   -0.26604200
+O      -0.58654700    0.22579500    0.53440600
+N      -0.56865900   -0.56231600   -1.60948200
+H       0.37186300   -0.20963600   -1.76990600
+H      -1.23128800    0.18935300   -1.77794600
+H       0.54793600    0.42316100    0.62892000
+
+1D rotors:
+pivots: [3, 5], dihedral: [4, 3, 5, 6], rotor symmetry: 1, max scan energy: 24.69 kJ/mol
+* Invalidated! pivots: [3, 4], dihedral: [5, 3, 4, 8], invalidation reason: Two consecutive points are inconsistent by more than 17.70 kJ/molTwo consecutive points are inconsistent by more than 17.70 kJ/mol
+""",
+)
+
+entry(
+    index =38,
+    label = "NH2OO + NH2OH <=> HNOH + NH2OOH",
+    degeneracy = 1.0,
+    kinetics = Arrhenius(A=(1.3101e-09,'cm^3/(mol*s)'), n=5.95859, Ea=(32.5534,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
+    longDesc = 
+"""
+TS method summary for TS57 in NH2OO + NH2OH <=> HNOH + NH2OOH:
+Methods that successfully generated a TS guess:
+heuristics,heuristics,heuristics,
+The method that generated the best TS guess and its output used for the optimization: heuristics
+
+
+TS external symmetry: 1, TS optical isomers: 2
+
+Optimized TS geometry:
+O       0.16057400   -1.55281700   -0.81492500
+N      -0.14658700   -1.74076200    0.51134800
+H      -0.36383900   -0.68403600    0.96694400
+H       0.73063600   -2.07641000    0.90499700
+H      -0.66516600   -1.27226200   -1.22244800
+O      -0.48404400    1.07440700   -0.09528000
+O      -0.33769200    0.57575800    1.17477500
+N       0.72065100    1.58690200   -0.57983800
+H       1.37861800    0.81178300   -0.59496900
+H       1.04088600    2.25772400    0.11352900
+
+1D rotors:
+pivots: [1, 2], dihedral: [5, 1, 2, 4], rotor symmetry: 1, max scan energy: 45.59 kJ/mol
+pivots: [6, 8], dihedral: [7, 6, 8, 9], rotor symmetry: 1, max scan energy: 24.98 kJ/mol
+* Invalidated! pivots: [6, 7], dihedral: [8, 6, 7, 3], invalidation reason: Two consecutive points are inconsistent by more than 21.35 kJ/molTwo consecutive points are inconsistent by more than 21.35 kJ/mol
+""",
+)
+
+

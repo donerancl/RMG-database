@@ -891,6 +891,7 @@ entry(
 entry(
     index = 13, 
     label = "H + H2NO <=> HNO + H2",
+    duplicate="True",
     # reactants = ['H', 'H2NO'],
     # products = ['HNO', 'H2'],
     kinetics = PDepArrhenius(
@@ -1760,12 +1761,12 @@ pivots: [1, 2], dihedral: [4, 1, 2, 3], rotor symmetry: 1, max scan energy: 40.2
 
 entry(
     index = 30,
-    label = "NO + H2NN <=> HNO + NNH",
+    label = "NO1 + H2NN <=> HNO + NNH",
     degeneracy = 1.0,
     kinetics = Arrhenius(A=(11.4894,'cm^3/(mol*s)'), n=3.24612, Ea=(18.9232,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(3000,'K')),
     longDesc = 
 """
-TS method summary for TS20 in NO + H2NN <=> HNO + NNH:
+TS method summary for TS20 in NO1 + H2NN <=> HNO + NNH:
 Methods that successfully generated a TS guess:
 heuristics,heuristics,heuristics,
 The method that generated the best TS guess and its output used for the optimization: heuristics

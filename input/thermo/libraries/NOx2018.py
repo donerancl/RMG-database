@@ -405,34 +405,34 @@ C
 """,
 )
 
-entry(
-    index = 14,
-    label = "CH3",
-    molecule = 
-"""
-multiplicity 2
-1 C u1 p0 c0 {2,S} {3,S} {4,S}
-2 H u0 p0 c0 {1,S}
-3 H u0 p0 c0 {1,S}
-4 H u0 p0 c0 {1,S}
-""",
-    thermo = NASA(
-        polynomials = [
-            NASAPolynomial(coeffs=[3.61264,0.00309209,9.25475e-07,-1.65777e-09,6.07244e-13,16385,1.79995], Tmin=(200,'K'), Tmax=(1000,'K')),
-            NASAPolynomial(coeffs=[2.92198,0.00537479,-1.99748e-06,2.97585e-10,-1.7186e-14,16544.7,5.25397], Tmin=(1000,'K'), Tmax=(6000,'K')),
-        ],
-        Tmin = (200,'K'),
-        Tmax = (6000,'K'),
-    ),
-    shortDesc = u"""""",
-    longDesc = 
-u"""
-ATcT3E
+# entry(
+#     index = 14,
+#     label = "CH3",
+#     molecule = 
+# """
+# multiplicity 2
+# 1 C u1 p0 c0 {2,S} {3,S} {4,S}
+# 2 H u0 p0 c0 {1,S}
+# 3 H u0 p0 c0 {1,S}
+# 4 H u0 p0 c0 {1,S}
+# """,
+#     thermo = NASA(
+#         polynomials = [
+#             NASAPolynomial(coeffs=[3.61264,0.00309209,9.25475e-07,-1.65777e-09,6.07244e-13,16385,1.79995], Tmin=(200,'K'), Tmax=(1000,'K')),
+#             NASAPolynomial(coeffs=[2.92198,0.00537479,-1.99748e-06,2.97585e-10,-1.7186e-14,16544.7,5.25397], Tmin=(1000,'K'), Tmax=(6000,'K')),
+#         ],
+#         Tmin = (200,'K'),
+#         Tmax = (6000,'K'),
+#     ),
+#     shortDesc = u"""""",
+#     longDesc = 
+# u"""
+# ATcT3E
 
-CH3 <g> ATcT ver. 1.122, DHf298 = 146.374 ? 0.080 kJ/mol - fit JAN17.
-[CH3]
-""",
-)
+# CH3 <g> ATcT ver. 1.122, DHf298 = 146.374 ? 0.080 kJ/mol - fit JAN17.
+# [CH3]
+# """,
+# )
 
 entry(
     index = 15,

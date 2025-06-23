@@ -10141,11 +10141,17 @@ entry(
     label = "NH + HONO <=> NH2 + NO2",
     degeneracy = 1,
     kinetics = Arrhenius(A=(1e+13, 'cm^3/(mol*s)'), n=0, Ea=(0, 'cal/mol'), T0=(1, 'K')),
+    shortDesc=u"""[Glarborg2018]""",
+    longDesc=
+    u"""
+    JAM estimate
+    """,
 )
 
 entry(
     index = 604,
     label = "NH + NO2 <=> N2O + OH",
+    allow_pdep_route=False,
     degeneracy = 1,
     kinetics = Arrhenius(A=(4.1e+12, 'cm^3/(mol*s)'), n=0, Ea=(0, 'cal/mol'), T0=(1, 'K')),
 )
@@ -10153,6 +10159,7 @@ entry(
 entry(
     index = 605,
     label = "NH + NO2 <=> HNO + NO",
+    allow_pdep_route=False,
     degeneracy = 1,
     kinetics = Arrhenius(A=(5.9e+12, 'cm^3/(mol*s)'), n=0, Ea=(0, 'cal/mol'), T0=(1, 'K')),
 )
@@ -10507,6 +10514,11 @@ entry(
             Arrhenius(A=(3.3e+08, 'cm^3/(mol*s)'), n=1.5, Ea=(-358, 'cal/mol'), T0=(1, 'K')),
         ],
     ),
+        shortDesc=u"""[DeanBozzelli]""",
+    longDesc=
+    u"""
+    Dean AM Bozzelli JW (Gardiner WC) Gas Phase Combustion Chemistry, Springer 2000
+    """,
 )
 
 entry(

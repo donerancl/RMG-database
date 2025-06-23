@@ -21,6 +21,7 @@ entry(
     label = "HNNO + H <=> NH2 + NO",
     degeneracy = 1,
     duplicate=True,
+    allow_pdep_route=False,
     kinetics = Arrhenius(
         A=(9E12, 'cm^3/(mol*s)'), 
         n=0.183, 
@@ -39,6 +40,7 @@ entry(
     index = 2,
     label = "HNNO + H <=> NH2 + NO",
     degeneracy = 1,
+    allow_pdep_route=False,
     duplicate=True,
     kinetics = Arrhenius(
         A=(2.9E10, 'cm^3/(mol*s)'), 
@@ -59,6 +61,7 @@ entry(
     index = 3,
     label = "HNNO + H <=> N2 + H + OH",
     degeneracy = 1,
+    allow_pdep_route=False,
     duplicate=True,
     kinetics = Arrhenius(
         A=(6.0E13, 'cm^3/(mol*s)'), 
@@ -79,6 +82,7 @@ entry(
     index = 4,
     label = "HNNO + H <=> N2 + H + OH",
     degeneracy = 1,
+    allow_pdep_route=False,
     duplicate=True,
     kinetics = Arrhenius(
         A=(5.0E13, 'cm^3/(mol*s)'), 
@@ -100,6 +104,7 @@ entry(
     label = "HNNO + H <=> N2 + H2O",
     degeneracy = 1,
     duplicate=True,
+    allow_pdep_route=False,
     kinetics = Arrhenius(
         A=(3.95E13, 'cm^3/(mol*s)'), 
         n=-0.139, 
@@ -120,6 +125,7 @@ entry(
     label = "HNNO + H <=> N2 + H2O",
     degeneracy = 1,
     duplicate=True,
+    allow_pdep_route=False,
     kinetics = Arrhenius(
         A=(4.55E13, 'cm^3/(mol*s)'), 
         n=-0.088, 
@@ -140,6 +146,7 @@ entry(
     label = "HNNO + H <=> N2O + H2",
     degeneracy = 1,
     duplicate=True,
+    allow_pdep_route=False,
     kinetics = Arrhenius(
         A=(3.35E6, 'cm^3/(mol*s)'), 
         n=1.878, 
@@ -160,6 +167,7 @@ entry(
     label = "HNNO + H <=> N2O + H2",
     degeneracy = 1,
     duplicate=True,
+    allow_pdep_route=False,
     kinetics = Arrhenius(
         A=(1.5E13, 'cm^3/(mol*s)'), 
         n=0.095, 

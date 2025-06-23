@@ -23,6 +23,21 @@ This does not forbid ozone, [O-][O+]=O
 )
 
 entry(
+    label = "N2_triplet",
+    group =
+"""
+multiplicity [3]
+1 N u1 p1 c0 {2,D}
+2 N u1 p1 c0 {1,D}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+forbids triplet N2
+""",
+)
+
+entry(
     label = "Od_rad",
     group =
 """
@@ -1822,5 +1837,21 @@ multiplicity 3
     longDesc =
 u"""
 This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2svpd and wb97xd/def2tzvpd
+""",
+)
+
+entry(
+    label = "HNO(T)",
+    species =
+"""
+multiplicity 3
+1 N u1 p1 c0 {2,S} {3,S}
+2 O u1 p2 c0 {1,S}
+3 H u0 p0 c0 {1,S}
+""",
+    shortDesc = u"""""",
+    longDesc =
+u"""
+testing without this species due to overestimated rates
 """,
 )

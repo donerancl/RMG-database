@@ -2745,17 +2745,17 @@ klippenstein 2011
 # """,
 # )
 
-entry(
-    index = 140,
-    label = 'NH2 + NO <=> N2 + H2O',
-    kinetics = Arrhenius(A=(1.3E16, 'cm^3/(mol*s)'), n=-1.25, Ea=(0, 'kcal/mol'),T0=(1, 'K')),
-    duplicate = True,
-    shortDesc = u"""[klippenstein 2011]""",
-    longDesc =
-u"""
-Klippenstein 2011
-""",
-)
+# entry(
+#     index = 140,
+#     label = 'NH2 + NO <=> N2 + H2O',
+#     kinetics = Arrhenius(A=(1.3E16, 'cm^3/(mol*s)'), n=-1.25, Ea=(0, 'kcal/mol'),T0=(1, 'K')),
+#     duplicate = True,
+#     shortDesc = u"""[klippenstein 2011]""",
+#     longDesc =
+# u"""
+# Klippenstein 2011
+# """,
+# )
 
 
 
@@ -2775,6 +2775,20 @@ Also available from [Hanson1981], k2, Uncertainty: +100%, -70%, Shocktube measur
 but [Klippenstein2000] claim that the [Hanson1981] rate is too high by 2-3 orders of magnitude.
 """,
 )
+
+entry(
+    index = 140,
+    label = 'NH2 + NO <=> N2 + H2O',
+    allow_pdep_route = False,
+    kinetics = Arrhenius(A=(1.09826e+21,'cm^3/(mol*s)'), n=-2.82615, Ea=(6.4168,'kJ/mol'), T0=(1,'K'), Tmin=(300,'K'), Tmax=(2500,'K'), comment="""Fitted to 45 data points; dA = *|/ 1.96425, dn = +|- 0.0854751, dEa = +|- 0.593762 kJ/mol"""),
+    shortDesc = u"""[klippenstein 2011]""",
+    longDesc =
+u"""
+Klippenstein 2011
+two arrhenius fit calculated at T = 300-2500 K and fit to single arrhenius expression with RMG source code
+""",
+)
+
 
 entry(
     index = 142,
@@ -3618,6 +3632,7 @@ entry(
     index=187,
     label="NO2 + NH <=> HNO + NO",
     degeneracy=1,
+    allow_pdep_route=False,
     kinetics=Arrhenius(A=(1.25e+06, 'cm^3/(mol*s)'), n=1.96, Ea=(2345, 'cal/mol'),
                        T0=(1, 'K'), Tmin=(300, 'K'), Tmax=(3000, 'K')),
     shortDesc=u"""[Lin1998d]""",
@@ -4870,19 +4885,19 @@ important branching reactions.
 """,
 )
 
-entry(
-    index = 265,
-    label = 'NH2O + O2 <=> HNO(T) + HO2',
-    duplicate = True,
-    kinetics = Arrhenius(A=(4.429e+03, 'cm^3/(mol*s)'), n=2.578, Ea=(29877, 'cal/mol'),
-                         T0=(1, 'K'), Tmin=(500, 'K'), Tmax=(3000, 'K')),
-    shortDesc = u"""[Sarathy2022]""",
-    longDesc =
-u"""
-Table S2, Reaction R2, quartet surface.
-Optimized and characterized the stationary points of the PESs with the CCSD method (Detailed in Table 1).
-""",
-)
+# entry(
+#     index = 265,
+#     label = 'NH2O + O2 <=> HNO(T) + HO2',
+#     duplicate = True,
+#     kinetics = Arrhenius(A=(4.429e+03, 'cm^3/(mol*s)'), n=2.578, Ea=(29877, 'cal/mol'),
+#                          T0=(1, 'K'), Tmin=(500, 'K'), Tmax=(3000, 'K')),
+#     shortDesc = u"""[Sarathy2022]""",
+#     longDesc =
+# u"""
+# Table S2, Reaction R2, quartet surface.
+# Optimized and characterized the stationary points of the PESs with the CCSD method (Detailed in Table 1).
+# """,
+# )
 
 entry(
     index=266,
@@ -5636,7 +5651,6 @@ entry(
     index=316,
     label="HNO <=> NO + H",
     degeneracy=1,
-    elementary_high_p=True,
     kinetics=PDepArrhenius(
         pressures=([0.1, 1, 10, 100, 1000], 'bar'),
         arrhenius=[
@@ -7729,15 +7743,4 @@ entry(
     """,
 )
 
-entry(
-    index = 446,
-    label = 'NH2 + NO <=> N2 + H2O',
-    kinetics = Arrhenius(A=(-3.13E13, 'cm^3/(mol*s)'), n=-0.48, Ea=(1.180, 'kcal/mol'),T0=(1, 'K')),
-    duplicate = True,
-    shortDesc = u"""[klippenstein 2011]""",
-    longDesc =
-u"""
-Klippenstein 2011
-""",
-)
 

@@ -1840,18 +1840,19 @@ This failed to pass nonphysical species screening by AD in 2024 at wb97xd/def2sv
 """,
 )
 
+
 entry(
-    label = "HNO(T)",
+    label = "[NH][O]",
     species =
 """
 multiplicity 3
-1 N u1 p1 c0 {2,S} {3,S}
-2 O u1 p2 c0 {1,S}
-3 H u0 p0 c0 {1,S}
+1 O u1 p2 c0 {2,S}
+2 N u1 p1 c0 {1,S} {3,S}
+3 H u0 p0 c0 {2,S}
 """,
     shortDesc = u"""""",
     longDesc =
 u"""
-testing without this species due to overestimated rates
+all rates calculated for HNO(T) have been very slow and RMG over-estimates its rate coefficients
 """,
 )

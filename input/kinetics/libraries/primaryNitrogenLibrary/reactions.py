@@ -7237,7 +7237,7 @@ entry(
     index=427,
     label="N2H2 <=> NNH + H",
     kinetics=ThirdBody(
-        arrheniusLow=Arrhenius(A=(3.8e+13, 'cm^3/(mol*s)'), n=1.2, Ea=(293000, 'kJ/mol'), T0=(1, 'K'))),
+        arrheniusLow=Arrhenius(A=(3.8e+13, 'cm^3/(mol*s)'), n=1.2, Ea=(70100, 'cal/mol'), T0=(1, 'K'))),
     shortDesc = u"""[Mei2019]""",
     longDesc =
 u"""
